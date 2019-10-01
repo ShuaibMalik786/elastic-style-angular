@@ -1,0 +1,12 @@
+/node_modules
+/dist
+/.vscode
+/.idea
+/.editorconfig
+/debug.log
+/karma.conf.js
+/npm-debug.log.*
+/protractor.conf.js
+/yarn-error.log
+/lib
+/scripts

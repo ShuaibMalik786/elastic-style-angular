@@ -1,0 +1,39 @@
+<div class="col-12 mt-4">
+  <div class="row">
+    <div class="col-12 d-flex justify-content-end">
+      <button class="btn btn-primary" routerLink="add">create style guide</button>
+    </div>
+  </div>
+  <div class="">
+      <table class="table table-bordered">
+        <thead class="thead-light">
+          <tr>
+            <th>ID</th>
+            <th>BUTTON</th>
+            <th>TAB</th>
+            <th>ACTIONS</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let styleGuide of styleGuides">
+            <td>{{ styleGuide?._id }}</td>
+            <td>{{ styleGuide?.button?.name }}</td>
+            <td>{{ styleGuide?.tab?.name }}</td>
+            <td>
+              <div class="dropdown dropleft">
+                <div class="" data-toggle="dropdown">
+                  <i class="fa fa-ellipsis-h fa-2x"></i>
+                </div>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" [routerLink]="[styleGuide?._id]">Details</a>
+                  <a class="dropdown-item" [routerLink]="['styleGuide', styleGuide?._id]">Edit</a>
+                  <a class="dropdown-item" (click)="delete(styleGuide?._id)">Delete</a>
+                  <a class="dropdown-item" (click)="download(styleGuide?._id)">Download</a>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+</div>

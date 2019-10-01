@@ -1,0 +1,81 @@
+.sticky-top {
+}
+
+.colorPicker {
+  cursor: pointer;
+}
+
+body, html {
+  font-size: 20px !important;
+}
+
+label {
+  font-size: 15px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  min-height: 28px;
+}
+
+.card-header{
+  font-size: 20px;
+  font-weight: 600;
+}
+
+//
+//.form-check-input {
+//  width: 23%;
+//  height: 1em;
+//}
+
+.htmlTextarea {
+  color: white;
+  background-color: black;
+  outline: none;
+  font-size: 13px;
+}
+
+.preview {
+  .htmlButton {
+    display: none;
+  }
+
+  .form-check {
+    display: flex;
+    align-items: center;
+  }
+
+  &:hover {
+    .htmlButton {
+      display: block;
+    }
+  }
+}
+
+.setting {
+  position: fixed;
+  z-index: 999999;
+  bottom: 0px;
+  .fa-close {
+    position: absolute;
+    top: 6px;
+    right: 5px;
+    cursor: pointer;
+  }
+  .card {
+    -webkit-box-shadow: 0 -1px 20px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0 -1px 20px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 -1px 20px rgba(0, 0, 0, 0.4);
+  }
+  display: none;
+  max-height: 100vh;
+  overflow: scroll;
+}
+
+.loading {
+  height: calc(100vh - 51px);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

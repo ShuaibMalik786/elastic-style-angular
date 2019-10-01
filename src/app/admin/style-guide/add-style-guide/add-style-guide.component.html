@@ -1,0 +1,119 @@
+<div class="col-12">
+  <div class="row">
+    <form class="col-12" [formGroup]="styleGuideForm" (ngSubmit)="onSubmit()">
+      <div class="col-12 mb-5">
+        <div class="card">
+          <div class="card-body">
+            <div class="col-2">
+              <label>Select theme color &nbsp;&nbsp;&nbsp;</label>
+              <input class="form-control" [(colorPicker)]="color" [style.background]="color"
+                [cpPresetColors]="['#fff', '#2889e9']" (colorPickerChange)="colorSelected($event)" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 mb-5" *ngIf="components?.buttons.length">
+        <div class="card">
+          <div class="card-header">Buttons</div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-3" *ngFor="let button of components?.buttons">
+                <div class="form-check">
+                  <label class="form-check-label">
+                    <input type="radio" class="form-check-input" [value]="button?._id" formControlName="button"
+                      (change)="buttonSelected(button?.css)">{{button?.name}}
+                  </label>
+                </div>
+                <app-preview [id]="button?._id" [html]="button?.html" [css]="button?.previewCss" [color]="color">
+                </app-preview>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 mb-5" *ngIf="components?.tabs.length">
+        <div class="card">
+          <div class="card-header">Tabs</div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-6" *ngFor="let tab of components?.tabs">
+                <div class="form-check">
+                  <label class="form-check-label">
+                    <input type="radio" class="form-check-input" [value]="tab?._id" formControlName="tab"
+                      (change)="tabSelected(tab?.css)">{{tab?.name}}
+                  </label>
+                </div>
+                <app-preview [id]="tab?._id" [html]="tab?.html" [css]="tab?.previewCss" [color]="color">
+                </app-preview>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-12 mb-5" *ngIf="components?.forms.length">
+        <div class="card">
+          <div class="card-header">Forms</div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-6" *ngFor="let form of components?.forms">
+                <div class="form-check">
+                  <label class="form-check-label">
+                    <input type="radio" class="form-check-input" [value]="form?._id" formControlName="tab"
+                           (change)="tabSelected(form?.css)">{{form?.name}}
+                  </label>
+                </div>
+                <app-preview [id]="form?._id" [html]="form?.html" [css]="form?.previewCss" [color]="color">
+                </app-preview>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-12 mb-5" *ngIf="components?.badges.length">
+        <div class="card">
+          <div class="card-header">Badges</div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-6" *ngFor="let badge of components?.badges">
+                <div class="form-check">
+                  <label class="form-check-label">
+                    <input type="radio" class="form-check-input" [value]="badge?._id" formControlName="tab"
+                           (change)="tabSelected(badge?.css)">{{badge?.name}}
+                  </label>
+                </div>
+                <app-preview [id]="badge?._id" [html]="badge?.html" [css]="badge?.previewCss" [color]="color">
+                </app-preview>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-12 mb-5" *ngIf="components?.cards.length">
+        <div class="card">
+          <div class="card-header">Cards</div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-6" *ngFor="let badge of components?.cards">
+                <div class="form-check">
+                  <label class="form-check-label">
+                    <input type="radio" class="form-check-input" [value]="badge?._id" formControlName="tab"
+                           (change)="tabSelected(badge?.css)">{{badge?.name}}
+                  </label>
+                </div>
+                <app-preview [id]="badge?._id" [html]="badge?.html" [css]="badge?.previewCss" [color]="color">
+                </app-preview>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-12">
+        <button class="btn btn-primary" type="onSubmit()">Save</button>
+      </div>
+    </form>
+  </div>
+</div>

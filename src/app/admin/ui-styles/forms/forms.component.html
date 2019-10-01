@@ -1,0 +1,40 @@
+<div class="col-12 mt-3">
+  <div class="col-12">
+    <div class="row d-flex justify-content-end">
+        <button class="btn btn-primary" routerLink="add">Add Form</button>
+    </div>
+  </div>
+    <div class="">
+        <table class="table table-bordered">
+            <thead class="thead-light">
+            <tr>
+                <th>NAME</th>
+                <th>HTML</th>
+                <th>CSS</th>
+                <th>SCSS</th>
+                <th>ACTIONS</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let form of forms">
+                <td>{{ form?.name }}</td>
+                <td>{{ form?.html }}</td>
+                <td>{{ form?.css }}</td>
+                <td>{{ form?.scss }}</td>
+                <td>
+                    <div class="dropdown dropleft">
+                        <div class="" data-toggle="dropdown">
+                            <i class="fa fa-ellipsis-h fa-2x"></i>
+                        </div>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" [routerLink]="[form?._id]">Details</a>
+                            <a class="dropdown-item" [routerLink]="['edit', form?._id]">Edit</a>
+                            <a class="dropdown-item" (click)="delete(form?._id)">Delete</a>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

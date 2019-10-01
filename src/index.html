@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Elastic style</title>
+    <base href="/"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+
+    <link
+            rel="stylesheet"
+            href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome-font-awesome.min.css"
+            async
+    />
+</head>
+<body>
+<app-root></app-root>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="./assets/js/core.js"></script>
+<script>
+    setInterval(() => {
+        $('[data-toggle="tooltip"]').tooltip();
+        $('[data-toggle="popover"]').popover();
+    }, 1000);
+</script>
+<style>
+
+</style>
+</html>

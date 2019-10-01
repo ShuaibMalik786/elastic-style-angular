@@ -1,0 +1,39 @@
+<div class="col-12">
+    <div class="col-12 d-flex justify-content-end mb-2">
+      <!-- <button class="btn btn-primary m-3">Add button</button> -->
+      <button class="btn btn-primary" routerLink="add">Add tab</button>
+    </div>
+    <div class="">
+      <table class="table table-bordered">
+        <thead class="thead-light">
+          <tr>
+            <th>NAME</th>
+            <th>HTML</th>
+            <th>CSS</th>
+            <th>SCSS</th>
+            <th>ACTIONS</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let tab of badges">
+            <td>{{ tab?.name }}</td>
+            <td>{{ tab?.html }}</td>
+            <td>{{ tab?.css }}</td>
+            <td>{{ tab?.scss }}</td>
+            <td>
+              <div class="dropdown dropleft">
+                <div class="" data-toggle="dropdown">
+                  <i class="fa fa-ellipsis-h fa-2x"></i>
+                </div>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" [routerLink]="[tab?._id]">Details</a>
+                  <a class="dropdown-item" [routerLink]="['edit', tab?._id]">Edit</a>
+                  <a class="dropdown-item" (click)="delete(tab?._id)">Delete</a>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

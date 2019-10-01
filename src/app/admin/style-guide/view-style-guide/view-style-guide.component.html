@@ -1,0 +1,33 @@
+<div class="col-12 mt-3">
+  <div class="row">
+    <div class="col-12 mb-5">
+      <div class="card">
+        <div class="card-header">Primary color</div>
+        <div class="card-body">
+          <div class="col-1" [ngStyle]="{'background-color': styleGuide?.primaryColor, 'height': '30px'}">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 mb-5">
+      <div class="card">
+        <div class="card-header">Button</div>
+        <div class="card-body">
+          <app-preview [id]="styleGuide?.button?._id" [html]="styleGuide?.button?.html"
+            [css]="styleGuide?.button?.previewCss" [color]="styleGuide?.primaryColor">
+          </app-preview>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 mb-5">
+      <div class="card">
+        <div class="card-header">Tab</div>
+        <div class="card-body">
+          <app-preview [id]="styleGuide?.tab?._id" [html]="styleGuide?.tab?.html" [css]="styleGuide?.tab?.previewCss"
+            [color]="styleGuide?.primaryColor">
+          </app-preview>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

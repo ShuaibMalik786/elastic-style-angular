@@ -1,0 +1,48 @@
+<div class="col-12 mt-3">
+  <div class="row">
+    <div class="col-12 mb-3">
+      <div class="card">
+        <div class="card-header">Preview</div>
+        <div class="card-body">
+          <div class="d-flex justify-content-center">
+            <app-preview
+              [id]="button?._id"
+              [html]="button?.html"
+              [css]="button?.previewCss"
+            ></app-preview>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 mb-3">
+      <div class="card">
+        <div class="card-header">CSS</div>
+        <div class="card-body">{{ button?.css }}</div>
+      </div>
+    </div>
+    <div class="col-12 mb-3">
+      <div class="card">
+        <div class="card-header">SCSS</div>
+        <div class="card-body">{{ button?.scss }}</div>
+      </div>
+    </div>
+    <div class="col-12 mb-3">
+      <div class="card">
+        <div class="card-header">PREVIEW CSS</div>
+        <div class="card-body">{{ button?.previewCss }}</div>
+      </div>
+    </div>
+    <div class="col-12 mb-3">
+      <div class="card">
+        <div class="card-header">PREVIEW SCSS</div>
+        <div class="card-body">{{ button?.previewScss }}</div>
+      </div>
+    </div>
+    <div class="col-12 mb-3">
+      <div class="card">
+        <div class="card-header">HTML</div>
+        <div class="card-body">{{ button?.html }}</div>
+      </div>
+    </div>
+  </div>
+</div>

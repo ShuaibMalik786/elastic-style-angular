@@ -1,0 +1,47 @@
+<div class="col-12">
+    <div class="col-12 d-flex justify-content-end mb-2">
+        <!-- <button class="btn btn-primary m-3">Add button</button> -->
+        <button class="btn btn-primary" routerLink="add">Add alert</button>
+    </div>
+    <div class="">
+        <table class="table table-bordered">
+            <thead class="thead-light">
+            <tr>
+                <th>Primary Color</th>
+                <th>Secondary Color</th>
+                <th>Success Color</th>
+                <th>Info Color</th>
+                <th>Warning Color</th>
+                <th>Danger Color</th>
+                <th>Active</th>
+                <th>ACTIONS</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let cnf of config">
+                <td>{{ cnf?.primaryColor }}</td>
+                <td>{{ cnf?.secondaryColor }}</td>
+                <td>{{ cnf?.successColor }}</td>
+                <td>{{ cnf?.infoColor }}</td>
+                <td>{{ cnf?.warningColor }}</td>
+                <td>{{ cnf?.dangerColor }}</td>
+                <td>{{ cnf?.active }}</td>
+                <td>
+                    <div class="dropdown dropleft">
+                        <div class="" data-toggle="dropdown">
+                            <i class="fa fa-ellipsis-h fa-2x"></i>
+                        </div>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" [routerLink]="[cnf?._id]">Details</a>
+                            <a class="dropdown-item"
+                               (click)="changeStatus(cnf?._id, !cnf?.active)">{{cnf?.active ? 'Deactivate' : 'Activate'}}</a>
+                            <a class="dropdown-item" [routerLink]="['edit', cnf?._id]">Edit</a>
+                            <a class="dropdown-item" (click)="delete(cnf?._id)">Delete</a>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

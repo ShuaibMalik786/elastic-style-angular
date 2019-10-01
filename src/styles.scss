@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+
+body,
+html {
+  font-size: 14px;
+}
+
+td {
+  .dropdown:hover .dropdown-menu {
+    cursor: pointer;
+    display: block;
+    margin-top: 0;
+  }
+
+  .dropdown {
+    cursor: pointer;
+  }
+
+}
