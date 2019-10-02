@@ -8,7 +8,8 @@
                 </button>
                 <button class="btn btn-primary btn-sm" (click)="onSubmit()">
                     <i class="fa fa-download"></i>
-                    Download css file (minified)</button>
+                    Download css file (minified)
+                </button>
             </nav>
             <form class="" [formGroup]="styleGuideForm">
                 <div class="setting">
@@ -198,7 +199,7 @@
                                                 data-target="#htmlModal"
                                                 title="HTML"
                                                 (click)="displayHtml(button?.html)">
-                                            <>
+                                            < html >
                                         </button>
                                     </div>
 
@@ -232,17 +233,27 @@
                         <div class="card-header">Tabs</div>
                         <div class="card-body">
                             <div class="row">
-                                <div class="col-12 col-lg-6" *ngFor="let tab of components?.tabs">
-                                    <div class="form-check">
-                                        <label class="form-check-label">
-                                            <input
-                                                    type="radio"
-                                                    class="form-check-input"
-                                                    [value]="tab?._id"
-                                                    formControlName="tab"
-                                                    (change)="tabSelected(tab?.css)"
-                                            />{{ tab?.name }}
-                                        </label>
+                                <div class="col-12 col-lg-6 preview" *ngFor="let tab of components?.tabs">
+                                    <div class="row col-10 d-flex justify-content-between">
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                                <input
+                                                        type="radio"
+                                                        class="form-check-input"
+                                                        [value]="tab?._id"
+                                                        formControlName="tab"
+                                                        (change)="tabSelected(tab?.css)"
+                                                />{{ tab?.name }}
+                                            </label>
+                                        </div>
+                                        <button
+                                                class="btn btn-primary btn-sm htmlButton"
+                                                data-toggle="modal"
+                                                data-target="#htmlModal"
+                                                title="HTML"
+                                                (click)="displayHtml(tab?.html)">
+                                            < html >
+                                        </button>
                                     </div>
                                     <app-user-preview
                                             [id]="tab?._id"
@@ -275,18 +286,29 @@
                         <div class="card-header">Forms</div>
                         <div class="card-body">
                             <div class="row">
-                                <div class="col-12 col-lg-6" *ngFor="let form of components?.forms">
-                                    <div class="form-check">
-                                        <label class="form-check-label">
-                                            <input
-                                                    type="radio"
-                                                    class="form-check-input"
-                                                    [value]="form?._id"
-                                                    formControlName="tab"
-                                                    (change)="tabSelected(form?.css)"
-                                            />{{ form?.name }}
-                                        </label>
+                                <div class="col-12 col-lg-6 preview" *ngFor="let form of components?.forms">
+                                    <div class="row col-10 d-flex justify-content-between">
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                                <input
+                                                        type="radio"
+                                                        class="form-check-input"
+                                                        [value]="form?._id"
+                                                        formControlName="form"
+                                                        (change)="tabSelected(form?.css)"
+                                                />{{ form?.name }}
+                                            </label>
+                                        </div>
+                                        <button
+                                                class="btn btn-primary btn-sm htmlButton"
+                                                data-toggle="modal"
+                                                data-target="#htmlModal"
+                                                title="HTML"
+                                                (click)="displayHtml(form?.html)">
+                                            < html >
+                                        </button>
                                     </div>
+
                                     <app-user-preview
                                             [id]="form?._id"
                                             [html]="form?.html"
@@ -318,18 +340,30 @@
                         <div class="card-header">Badges</div>
                         <div class="card-body">
                             <div class="row">
-                                <div class="col-12 col-lg-6" *ngFor="let badge of components?.badges">
-                                    <div class="form-check">
-                                        <label class="form-check-label">
-                                            <input
-                                                    type="radio"
-                                                    class="form-check-input"
-                                                    [value]="badge?._id"
-                                                    formControlName="tab"
-                                                    (change)="tabSelected(badge?.css)"
-                                            />{{ badge?.name }}
-                                        </label>
+                                <div class="col-12 col-lg-6 preview" *ngFor="let badge of components?.badges">
+                                    <div class="row col-10 d-flex justify-content-between">
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                                <input
+                                                        type="radio"
+                                                        class="form-check-input"
+                                                        [value]="badge?._id"
+                                                        formControlName="badge"
+                                                        (change)="tabSelected(badge?.css)"
+                                                />{{ badge?.name }}
+                                            </label>
+                                        </div>
+                                        <button
+                                                class="btn btn-primary btn-sm htmlButton"
+                                                data-toggle="modal"
+                                                data-target="#htmlModal"
+                                                title="HTML"
+                                                (click)="displayHtml(badge?.html)">
+                                            < html >
+                                        </button>
                                     </div>
+
+
                                     <app-user-preview
                                             [id]="badge?._id"
                                             [html]="badge?.html"
@@ -362,22 +396,34 @@
                         <div class="card-header">Cards</div>
                         <div class="card-body">
                             <div class="row">
-                                <div class="col-12 col-lg-6" *ngFor="let badge of components?.cards">
-                                    <div class="form-check">
-                                        <label class="form-check-label">
-                                            <input
-                                                    type="radio"
-                                                    class="form-check-input"
-                                                    [value]="badge?._id"
-                                                    formControlName="tab"
-                                                    (change)="tabSelected(badge?.css)"
-                                            />{{ badge?.name }}
-                                        </label>
+                                <div class="col-12 col-lg-6 preview" *ngFor="let card of components?.cards">
+
+                                    <div class="row col-10 d-flex justify-content-between">
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                                <input
+                                                        type="radio"
+                                                        class="form-check-input"
+                                                        [value]="card?._id"
+                                                        formControlName="card"
+                                                        (change)="tabSelected(card?.css)"
+                                                />{{ card?.name }}
+                                            </label>
+                                        </div>
+                                        <button
+                                                class="btn btn-primary btn-sm htmlButton"
+                                                data-toggle="modal"
+                                                data-target="#htmlModal"
+                                                title="HTML"
+                                                (click)="displayHtml(card?.html)">
+                                            < html >
+                                        </button>
                                     </div>
+
                                     <app-user-preview
-                                            [id]="badge?._id"
-                                            [html]="badge?.html"
-                                            [css]="badge?.previewCss"
+                                            [id]="card?._id"
+                                            [html]="card?.html"
+                                            [css]="card?.previewCss"
                                             [primaryColor]="primaryColor"
                                             [successColor]="successColor"
                                             [dangerColor]="dangerColor"
@@ -405,16 +451,16 @@
                         <div class="card-header">Tooltip</div>
                         <div class="card-body">
                             <div class="row">
-                                <div class="col-12 col-lg-6" *ngFor="let badge of components?.tooltips">
+                                <div class="col-12 col-lg-6" *ngFor="let tooltip of components?.tooltips">
                                     <div class="form-check">
                                         <label class="form-check-label">
                                             <input
                                                     type="radio"
                                                     class="form-check-input"
-                                                    [value]="badge?._id"
-                                                    formControlName="tab"
-                                                    (change)="tabSelected(badge?.css)"
-                                            />{{ badge?.name }}
+                                                    [value]="tooltip?._id"
+                                                    formControlName="tooltip"
+                                                    (change)="tabSelected(tooltip?.css)"
+                                            />{{ tooltip?.name }}
                                         </label>
                                     </div>
                                     <app-user-preview
@@ -448,16 +494,16 @@
                         <div class="card-header">Popovers</div>
                         <div class="card-body">
                             <div class="row">
-                                <div class="col-12 col-lg-6" *ngFor="let badge of components?.popovers">
+                                <div class="col-12 col-lg-6" *ngFor="let popover of components?.popovers">
                                     <div class="form-check">
                                         <label class="form-check-label">
                                             <input
                                                     type="radio"
                                                     class="form-check-input"
-                                                    [value]="badge?._id"
-                                                    formControlName="tab"
-                                                    (change)="tabSelected(badge?.css)"
-                                            />{{ badge?.name }}
+                                                    [value]="popover?._id"
+                                                    formControlName="popover"
+                                                    (change)="tabSelected(popover?.css)"
+                                            />{{ popover?.name }}
                                         </label>
                                     </div>
                                     <app-user-preview
@@ -486,27 +532,39 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 mb-5" *ngIf="components?.popovers.length">
+                <div class="col-12 mb-5" *ngIf="components?.alerts.length">
                     <div class="card">
                         <div class="card-header">Alerts</div>
                         <div class="card-body">
                             <div class="row">
-                                <div class="col-12 col-lg-6" *ngFor="let badge of components?.alerts">
-                                    <div class="form-check">
-                                        <label class="form-check-label">
-                                            <input
-                                                    type="radio"
-                                                    class="form-check-input"
-                                                    [value]="badge?._id"
-                                                    formControlName="tab"
-                                                    (change)="tabSelected(badge?.css)"
-                                            />{{ badge?.name }}
-                                        </label>
+                                <div class="col-12 col-lg-6 preview" *ngFor="let alert of components?.alerts">
+                                    <div class="row col-10 d-flex justify-content-between">
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                                <input
+                                                        type="radio"
+                                                        class="form-check-input"
+                                                        [value]="alert?._id"
+                                                        formControlName="alert"
+                                                        (change)="tabSelected(alert?.css)"
+                                                />{{ alert?.name }}
+                                            </label>
+                                        </div>
+                                        <button
+                                                class="btn btn-primary btn-sm htmlButton"
+                                                data-toggle="modal"
+                                                data-target="#htmlModal"
+                                                title="HTML"
+                                                (click)="displayHtml(alert?.html)">
+                                            < html >
+                                        </button>
                                     </div>
+
+
                                     <app-user-preview
-                                            [id]="badge?._id"
-                                            [html]="badge?.html"
-                                            [css]="badge?.previewCss"
+                                            [id]="alert?._id"
+                                            [html]="alert?.html"
+                                            [css]="alert?.previewCss"
                                             [primaryColor]="primaryColor"
                                             [successColor]="successColor"
                                             [dangerColor]="dangerColor"

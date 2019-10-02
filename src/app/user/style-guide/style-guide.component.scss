@@ -69,7 +69,6 @@ label {
   }
   display: none;
   max-height: 100vh;
-  overflow: scroll;
 }
 
 .loading {
@@ -78,4 +77,8 @@ label {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.navbar{
+  padding-bottom: 1rem;
 }
