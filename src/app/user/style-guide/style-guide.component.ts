@@ -11,7 +11,7 @@ import * as $ from 'jquery';
     styleUrls: ['./style-guide.component.scss']
 })
 export class StyleGuideComponent implements OnInit {
-    primaryColor = '#007bff';
+    primaryColor = 'red';
     secondaryColor = '#6c757d';
     successColor = '#28a745';
     infoColor = '#17a2b8';
@@ -220,7 +220,7 @@ export class StyleGuideComponent implements OnInit {
     }
 
     initializeForm() {
-        if (this.components.colors[0].primaryColor) {
+        if (this.components.colors) {
             this.primaryColor = this.components.colors[0].primaryColor;
             this.successColor = this.components.colors[0].successColor;
             this.warningColor = this.components.colors[0].warningColor;
