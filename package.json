@@ -23,6 +23,7 @@
     "core-js": "^2.5.4",
     "file-saver": "^2.0.2",
     "jquery": "^3.4.1",
+    "ng2-validation-manager": "^0.5.3",
     "ngx-color-picker": "^8.1.0",
     "ngx-toastr": "^10.2.0",
     "popper.js": "^1.15.0",
