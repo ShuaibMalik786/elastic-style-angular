@@ -54,7 +54,7 @@ export class StyleGuideComponent implements OnInit {
         button: new FormControl(''),
         buttonCss: new FormControl(''),
         tab: new FormControl(''),
-        tabsCss: new FormControl(''),
+        tabCss: new FormControl(''),
         form: new FormControl(''),
         formCss: new FormControl(''),
         badge: new FormControl(''),
@@ -161,24 +161,15 @@ export class StyleGuideComponent implements OnInit {
         }
     }
 
-    buttonSelected(css) {
-        this.styleGuideForm.controls['buttonCss'].setValue(css);
+
+    getFormControlName(name) {
+        return name.toLowerCase();
     }
 
-    tabSelected(css) {
-        this.styleGuideForm.controls['tabsCss'].setValue(css);
-    }
-
-    formSelected(css) {
-        this.styleGuideForm.controls['formCss'].setValue(css);
-    }
-
-    badgeSelected(css) {
-        this.styleGuideForm.controls['badgeCss'].setValue(css);
-    }
-
-    cardSelected(css) {
-        this.styleGuideForm.controls['cardCss'].setValue(css);
+    styleSelected(css, name) {
+        const formControlName = `${name.toLowerCase()}Css`;
+        console.log(formControlName);
+        this.styleGuideForm.controls[formControlName].setValue(css);
     }
 
     displayHtml(html) {
@@ -188,6 +179,7 @@ export class StyleGuideComponent implements OnInit {
     slideToggle() {
         $('.setting').slideToggle();
     }
+
 
     genrateCss() {
         let css =
