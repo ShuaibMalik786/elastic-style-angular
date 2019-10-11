@@ -3,11 +3,14 @@ import {NgModule} from '@angular/core';
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
-import {HttpClientModule} from '@angular/common/http';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {CommonModule} from '@angular/common';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import {ToastrModule} from 'ngx-toastr';
+import {TokenInterceptor} from './shared/interceptors/auth.interceptors';
+import {FormModule} from './admin/ui-styles/forms/forms.module';
+import {ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
     declarations: [AppComponent],
@@ -17,9 +20,15 @@ import {ToastrModule} from 'ngx-toastr';
         HttpClientModule,
         CommonModule,
         BrowserAnimationsModule,
-        ToastrModule.forRoot()
+        ToastrModule.forRoot(),
+        FormModule,
+        ReactiveFormsModule
     ],
-    providers: [],
+    providers: [{
+        provide: HTTP_INTERCEPTORS,
+        useClass: TokenInterceptor,
+        multi: true
+    }],
     bootstrap: [AppComponent]
 })
 export class AppModule {

@@ -7,23 +7,33 @@ import {environment} from './../../../environments/environment';
 @Injectable({
     providedIn: 'root'
 })
-export class LoginService {
+export class UserAccountService {
 
     constructor(private http: HttpClient) {
     }
 
-    login(data) {
-        const url = `${environment.apiBaseUrl}/auth/login`;
+    getUser(id) {
+        const url = `${environment.apiBaseUrl}/user/${id}`;
         return this.http
-            .post(url, data)
+            .get(url)
             .pipe(map(response => response, catchError(this.handleError)));
     }
 
-    public getToken(): string {
-        return localStorage.getItem('token');
+    update(id, data) {
+        const url = `${environment.apiBaseUrl}/user/${id}`;
+        return this.http
+            .put(url, data)
+            .pipe(map(response => response, catchError(this.handleError)));
+    }
+
+
+    logOut() {
+        localStorage.removeItem('token');
+        localStorage.removeItem('user');
     }
 
     public handleError(error: Response) {
         return observableThrowError(error.json());
     }
+
 }

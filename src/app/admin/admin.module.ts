@@ -73,6 +73,9 @@ import {TypographyModule} from './ui-styles/typography/typography.module';
         TooltipModule,
         TypographyModule
     ],
+    exports: [
+        HeaderComponent
+    ],
     providers: [ButtonService, StyleGuideService]
 })
 export class AdminModule {

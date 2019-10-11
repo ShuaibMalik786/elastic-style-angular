@@ -15,10 +15,13 @@ const routes: Routes = [
         loadChildren: './admin/admin.module#AdminModule'
     },
     {
+        path: 'profile/:id',
+        loadChildren: './user-account/user-account.module#UserAccountModule'
+    },
+    {
         path: '',
         loadChildren: './user/user.module#UserModule'
     },
-
 ];
 
 @NgModule({

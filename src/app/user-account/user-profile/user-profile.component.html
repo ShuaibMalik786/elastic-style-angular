@@ -1,0 +1,48 @@
+<app-user-header></app-user-header>
+<div class="col-12 pt-5 bg-light" style="min-height: 100vh">
+    <div class="row">
+        <div class="col-3">
+            <ul class="list-group">
+                <a class="list-group-item list-group-item-action active" href="JavaScript:void(0);">Profile</a>
+                <a class="list-group-item list-group-item-action" routerLink="style-guide">Style sheets</a>
+                <a class="list-group-item list-group-item-action" href="JavaScript:void(0);" (click)="logout()">Logout</a>
+            </ul>
+        </div>
+        <div class="col-9">
+            <div class="card">
+                <div class="card-body">
+                    <h3>My Profile</h3>
+                    <div class="col-12">
+                        <div class="row">
+                            <form class="col-12" [formGroup]="form.getForm()" (ngSubmit)="onSubmit()">
+                                <div class="row">
+                                    <div class="form-group col-4 pl-0">
+                                        <label>User name :</label>
+                                        <input type="text" class="form-control" formControlName="userName">
+                                        <small class="text-danger"
+                                               *ngIf="form.hasError('userName')">
+                                            {{form.getError('userName')}}
+                                        </small>
+                                    </div>
+                                    <div class="form-group col-4">
+                                        <label>Email :</label>
+                                        <input type="email" class="form-control" formControlName="email" disabled>
+                                        <small class="text-danger"
+                                               *ngIf="form.hasError('email')">
+                                            {{form.getError('email')}}
+                                        </small>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="row">
+                                            <button class="btn btn-primary">Save</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

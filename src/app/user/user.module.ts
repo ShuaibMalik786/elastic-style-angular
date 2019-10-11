@@ -19,6 +19,9 @@ import {UserPreviewComponent} from './shared/_component/preview/preview.componen
         HeaderComponent,
         UserPreviewComponent
     ],
+    exports: [
+        HeaderComponent
+    ],
     imports: [
         CommonModule,
         UserRoutingModule,
