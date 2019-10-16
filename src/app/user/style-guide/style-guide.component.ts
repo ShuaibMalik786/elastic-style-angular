@@ -3,7 +3,13 @@ import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {Component, OnInit} from '@angular/core';
 import {ToasterService} from 'src/app/admin/shared/_service/toaster.service';
 import {saveAs} from 'file-saver';
-import * as $ from 'jquery';
+
+declare var $: any;
+import {AuthService} from '../../shared/service/auth.service';
+import {LoginService} from '../../login/service/login.service';
+import {Router} from '@angular/router';
+import {ValidationManager} from 'ng2-validation-manager';
+import {StyleGuideService} from '../../admin/shared/_service/style-guide.service';
 
 @Component({
     selector: 'app-style-guide',
@@ -26,10 +32,15 @@ export class StyleGuideComponent implements OnInit {
     warningGradientColor = 'rgba(191, 190,190,0.45)';
     dangerGradientColor = 'rgba(222, 222,222,0.45)';
     html: any;
+    loginForm: any;
+    errorMessage: any;
 
     constructor(
         private styleGuideService: UserStyleGuideService,
-        private toasterService: ToasterService
+        private toasterService: ToasterService,
+        private authService: AuthService,
+        private loginService: LoginService,
+        private router: Router,
     ) {
     }
 
@@ -67,7 +78,8 @@ export class StyleGuideComponent implements OnInit {
         popoverCss: new FormControl(''),
         alert: new FormControl(''),
         alertCss: new FormControl(''),
-        css: new FormControl('', Validators.required)
+        css: new FormControl('', Validators.required),
+        userId: new FormControl('unRegistered', Validators.required)
     });
 
     ngOnInit() {
@@ -143,11 +155,15 @@ export class StyleGuideComponent implements OnInit {
     }
 
     onSubmit() {
+        let userId = JSON.parse(localStorage.getItem('user'));
+        userId ? userId = userId._id : userId = 'unRegisteredUser';
+        console.log(userId);
         this.genrateCss();
         if (!this.styleGuideForm.valid) {
             this.toasterService.error('No styles selected');
         }
         console.log(this.styleGuideForm.value);
+        this.styleGuideForm.controls['userId'].setValue(userId);
         if (this.styleGuideForm.valid) {
             this.styleGuideService.create(this.styleGuideForm.value).subscribe(
                 success => {
@@ -197,6 +213,12 @@ export class StyleGuideComponent implements OnInit {
         css = css.replace(/success-color/g, this.successColor);
         css = css.replace(/warning-color/g, this.warningColor);
         css = css.replace(/danger-color/g, this.dangerColor);
+        // Gradient colors
+        css = css.replace(/primary-gradient-color/g, this.primaryGradientColor);
+        css = css.replace(/secondary-gradient-color/g, this.secondaryGradientColor);
+        css = css.replace(/success-gradient-color/g, this.successGradientColor);
+        css = css.replace(/warning-gradient-color/g, this.warningGradientColor);
+        css = css.replace(/danger-gradient-color/g, this.dangerGradientColor);
 
         this.styleGuideForm.controls['css'].setValue(css);
 
@@ -260,10 +282,43 @@ export class StyleGuideComponent implements OnInit {
                 popoverCss: new FormControl(''),
                 alert: new FormControl(''),
                 alertCss: new FormControl(''),
-                css: new FormControl('', Validators.required)
+                css: new FormControl('', Validators.required),
+                userId: new FormControl('unRegistered', Validators.required)
             });
         }
+        this.loginForm = new ValidationManager({
+            'email': 'required|email',
+            'password': 'required|rangeLength:5,255',
+        });
 
     }
 
+
+    saveSg() {
+        if (!this.authService.isLoggedIn()) {
+            $('#loginModal').modal('show');
+        } else {
+            // Save style sheet
+            this.onSubmit();
+        }
+    }
+
+
+    login() {
+        if (this.loginForm.isValid()) {
+            this.loginService.login(this.loginForm.getData())
+                .subscribe(
+                    (success: any) => {
+                        localStorage.setItem('token', success.access_token);
+                        localStorage.setItem('user', JSON.stringify(success.user));
+                        this.onSubmit();
+                        $('#loginModal').modal('hide');
+                    },
+                    fail => {
+                        console.log(fail);
+                        this.errorMessage = fail.error.error;
+                    }
+                );
+        }
+    }
 }

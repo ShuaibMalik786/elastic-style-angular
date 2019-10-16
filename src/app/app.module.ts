@@ -11,6 +11,7 @@ import {ToastrModule} from 'ngx-toastr';
 import {TokenInterceptor} from './shared/interceptors/auth.interceptors';
 import {FormModule} from './admin/ui-styles/forms/forms.module';
 import {ReactiveFormsModule} from '@angular/forms';
+import {AuthService} from './shared/service/auth.service';
 
 @NgModule({
     declarations: [AppComponent],
@@ -28,7 +29,8 @@ import {ReactiveFormsModule} from '@angular/forms';
         provide: HTTP_INTERCEPTORS,
         useClass: TokenInterceptor,
         multi: true
-    }],
+    },
+        AuthService],
     bootstrap: [AppComponent]
 })
 export class AppModule {
