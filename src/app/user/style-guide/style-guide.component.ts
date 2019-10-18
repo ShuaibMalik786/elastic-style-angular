@@ -78,6 +78,8 @@ export class StyleGuideComponent implements OnInit {
         popoverCss: new FormControl(''),
         alert: new FormControl(''),
         alertCss: new FormControl(''),
+        typography: new FormControl(''),
+        typographyCss: new FormControl(''),
         css: new FormControl('', Validators.required),
         userId: new FormControl('unRegistered', Validators.required)
     });
@@ -282,6 +284,8 @@ export class StyleGuideComponent implements OnInit {
                 popoverCss: new FormControl(''),
                 alert: new FormControl(''),
                 alertCss: new FormControl(''),
+                typography: new FormControl(''),
+                typographyCss: new FormControl(''),
                 css: new FormControl('', Validators.required),
                 userId: new FormControl('unRegistered', Validators.required)
             });
