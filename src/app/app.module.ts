@@ -7,11 +7,14 @@ import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {CommonModule} from '@angular/common';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
-import {ToastrModule} from 'ngx-toastr';
 import {TokenInterceptor} from './shared/interceptors/auth.interceptors';
 import {FormModule} from './admin/ui-styles/forms/forms.module';
 import {ReactiveFormsModule} from '@angular/forms';
 import {AuthService} from './shared/service/auth.service';
+
+// third party modules
+import {ToastrModule} from 'ngx-toastr';
+import {Ng5SliderModule} from 'ng5-slider';
 
 @NgModule({
     declarations: [AppComponent],
@@ -23,6 +26,7 @@ import {AuthService} from './shared/service/auth.service';
         BrowserAnimationsModule,
         ToastrModule.forRoot(),
         FormModule,
+        Ng5SliderModule,
         ReactiveFormsModule
     ],
     providers: [{

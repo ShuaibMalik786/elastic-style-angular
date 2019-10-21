@@ -9,6 +9,7 @@ import {HeaderComponent} from './shared/_component/header/header.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {ColorPickerModule} from 'ngx-color-picker';
 import {UserPreviewComponent} from './shared/_component/preview/preview.component';
+import {Ng5SliderModule} from 'ng5-slider';
 
 @NgModule({
     declarations: [
@@ -27,6 +28,7 @@ import {UserPreviewComponent} from './shared/_component/preview/preview.componen
         UserRoutingModule,
         FormsModule,
         ReactiveFormsModule,
+        Ng5SliderModule,
         ColorPickerModule
     ]
 })

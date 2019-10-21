@@ -10,6 +10,8 @@ import {LoginService} from '../../login/service/login.service';
 import {Router} from '@angular/router';
 import {ValidationManager} from 'ng2-validation-manager';
 import {StyleGuideService} from '../../admin/shared/_service/style-guide.service';
+import {DomSanitizer} from '@angular/platform-browser';
+import {Options} from 'ng5-slider';
 
 @Component({
     selector: 'app-style-guide',
@@ -34,6 +36,12 @@ export class StyleGuideComponent implements OnInit {
     html: any;
     loginForm: any;
     errorMessage: any;
+    config: any;
+    fontSizeDefault = 12;
+    options: Options = {
+        floor: 5,
+        ceil: 20
+    };
 
     constructor(
         private styleGuideService: UserStyleGuideService,
@@ -41,6 +49,7 @@ export class StyleGuideComponent implements OnInit {
         private authService: AuthService,
         private loginService: LoginService,
         private router: Router,
+        private sanatizer: DomSanitizer,
     ) {
     }
 
@@ -81,7 +90,8 @@ export class StyleGuideComponent implements OnInit {
         typography: new FormControl(''),
         typographyCss: new FormControl(''),
         css: new FormControl('', Validators.required),
-        userId: new FormControl('unRegistered', Validators.required)
+        userId: new FormControl('unRegistered', Validators.required),
+        config: new FormControl(''),
     });
 
     ngOnInit() {
@@ -102,30 +112,37 @@ export class StyleGuideComponent implements OnInit {
 
     PrimaryColorSelected(color) {
         this.styleGuideForm.controls['primaryColor'].setValue(color);
+        this.initializeConfig();
     }
 
     secondaryColorSelected(color) {
         this.styleGuideForm.controls['secondaryColor'].setValue(color);
+        this.initializeConfig();
     }
 
     successColorSelected(color) {
         this.styleGuideForm.controls['successColor'].setValue(color);
+        this.initializeConfig();
     }
 
     infoColorSelected(color) {
         this.styleGuideForm.controls['infoColor'].setValue(color);
+        this.initializeConfig();
     }
 
     warningColorSelected(color) {
         this.styleGuideForm.controls['warningColor'].setValue(color);
+        this.initializeConfig();
     }
 
     dangerColorSelected(color) {
         this.styleGuideForm.controls['dangerColor'].setValue(color);
+        this.initializeConfig();
     }
 
     darkColorSelected(color) {
         this.styleGuideForm.controls['darkColor'].setValue(color);
+        this.initializeConfig();
     }
 
     lightColorSelected(color) {
@@ -195,12 +212,17 @@ export class StyleGuideComponent implements OnInit {
     }
 
     slideToggle() {
-        $('.setting').slideToggle();
+        $('.colors').slideToggle();
+    }
+
+    slideToggle2() {
+        $('.config').slideToggle();
     }
 
 
     genrateCss() {
         let css =
+            this.styleGuideForm.controls['config'].value +
             this.styleGuideForm.controls['buttonCss'].value +
             this.styleGuideForm.controls['tabsCss'].value +
             this.styleGuideForm.controls['formCss'].value +
@@ -287,14 +309,15 @@ export class StyleGuideComponent implements OnInit {
                 typography: new FormControl(''),
                 typographyCss: new FormControl(''),
                 css: new FormControl('', Validators.required),
-                userId: new FormControl('unRegistered', Validators.required)
+                userId: new FormControl('unRegistered', Validators.required),
+                config: new FormControl(''),
             });
         }
         this.loginForm = new ValidationManager({
             'email': 'required|email',
             'password': 'required|rangeLength:5,255',
         });
-
+        this.initializeConfig();
     }
 
 
@@ -324,5 +347,34 @@ export class StyleGuideComponent implements OnInit {
                     }
                 );
         }
+    }
+
+    initializeConfig() {
+        this.styleGuideForm.controls['config'].setValue(`
+        body {font-size: ${this.fontSizeDefault}px;}
+        .bg-primary { background-color: ${this.primaryColor};}
+        .bg-success { background-color: ${this.successColor};}
+        .bg-info { background-color: ${this.infoColor};}
+        .bg-warning { background-color: ${this.warningColor};}
+        .bg-danger { background-color: ${this.dangerColor};}
+        .bg-secondary { background-color: ${this.secondaryColor};}
+        .bg-light { background-color: ${this.lightColor};}
+        .bg-dark { background-color: ${this.darkColor};}
+        .text-primary { color: ${this.primaryColor};}
+        .text-success { color: ${this.successColor};}
+        .text-info { color: ${this.infoColor};}
+        .text-warning { color: ${this.warningColor};}
+        .text-danger { color: ${this.dangerColor};}
+        .text-secondary { color: ${this.secondaryColor};}
+        .text-light { color: ${this.lightColor};}
+        .text-dark { color: ${this.darkColor};}
+        `);
+    }
+
+    fontSizeChanged() {
+        this.initializeConfig();
+        this.config = `<style>body {font-size: ${this.fontSizeDefault}px }</style>`;
+        this.config = this.sanatizer.bypassSecurityTrustHtml(this.config);
+        console.log(this.fontSizeDefault);
     }
 }

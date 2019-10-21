@@ -52,7 +52,28 @@ label {
   }
 }
 
-.setting {
+.colors {
+  position: fixed;
+  z-index: 999999;
+  bottom: 0px;
+  .fa-close {
+    position: absolute;
+    top: 6px;
+    right: 5px;
+    cursor: pointer;
+  }
+  .card {
+    -webkit-box-shadow: 0 -1px 20px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0 -1px 20px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 -1px 20px rgba(0, 0, 0, 0.4);
+  }
+  display: none;
+  max-height: 100vh;
+}
+
+
+.config {
+  width: 100%;
   position: fixed;
   z-index: 999999;
   bottom: 0px;

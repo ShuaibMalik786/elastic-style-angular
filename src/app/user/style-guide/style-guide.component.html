@@ -6,6 +6,10 @@
                     <i class="fa fa-eyedropper"></i>
                     select colors
                 </button>
+                <button class="btn btn-primary btn-sm" (click)="slideToggle2()">
+                    <i class="fa fa-text-height"></i>
+                    Font size
+                </button>
                 <button class="btn btn-primary btn-sm" (click)="saveSg()">
                     Save
                 </button>
@@ -15,7 +19,7 @@
                 </button>
             </nav>
                         <form class="" [formGroup]="styleGuideForm">
-                            <div class="setting">
+                            <div class="colors">
                                 <div class="card">
                                     <div class="card-body">
                                         <div class="row d-flex justify-content-between">
@@ -677,3 +681,22 @@
         <div class="spinner-grow text-primary"></div>
     </div>
 </ng-template>
+
+<div [innerHTML]="config">
+
+</div>
+
+
+<div class="config">
+    <div class="card">
+        <div class="card-body">
+            <div class="row d-flex justify-content-between">
+                <i class="fa fa-close fa-lg" (click)="slideToggle2()"></i>
+                <div class="col-12">
+                    <label>Font size :</label>
+                    <ng5-slider [(value)]="fontSizeDefault" [options]="options" (userChange)="fontSizeChanged()"></ng5-slider>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
