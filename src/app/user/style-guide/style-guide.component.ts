@@ -37,10 +37,11 @@ export class StyleGuideComponent implements OnInit {
     loginForm: any;
     errorMessage: any;
     config: any;
-    fontSizeDefault = 12;
+    fontSizeDefault = 14;
     options: Options = {
         floor: 5,
-        ceil: 20
+        ceil: 22,
+        animate: false
     };
 
     constructor(
@@ -89,6 +90,8 @@ export class StyleGuideComponent implements OnInit {
         alertCss: new FormControl(''),
         typography: new FormControl(''),
         typographyCss: new FormControl(''),
+        modal: new FormControl(''),
+        modalCss: new FormControl(''),
         css: new FormControl('', Validators.required),
         userId: new FormControl('unRegistered', Validators.required),
         config: new FormControl(''),
@@ -308,6 +311,8 @@ export class StyleGuideComponent implements OnInit {
                 alertCss: new FormControl(''),
                 typography: new FormControl(''),
                 typographyCss: new FormControl(''),
+                modal: new FormControl(''),
+                modalCss: new FormControl(''),
                 css: new FormControl('', Validators.required),
                 userId: new FormControl('unRegistered', Validators.required),
                 config: new FormControl(''),
@@ -351,7 +356,7 @@ export class StyleGuideComponent implements OnInit {
 
     initializeConfig() {
         this.styleGuideForm.controls['config'].setValue(`
-        body {font-size: ${this.fontSizeDefault}px;}
+        html {font-size: ${this.fontSizeDefault}px;}
         .bg-primary { background-color: ${this.primaryColor};}
         .bg-success { background-color: ${this.successColor};}
         .bg-info { background-color: ${this.infoColor};}
@@ -369,12 +374,15 @@ export class StyleGuideComponent implements OnInit {
         .text-light { color: ${this.lightColor};}
         .text-dark { color: ${this.darkColor};}
         `);
+
+        // set font size css equal to fontSizeDefault variable
+        this.config = `<style>html {font-size: ${this.fontSizeDefault}px }</style>`;
+        this.config = this.sanatizer.bypassSecurityTrustHtml(this.config);
     }
 
     fontSizeChanged() {
         this.initializeConfig();
-        this.config = `<style>body {font-size: ${this.fontSizeDefault}px }</style>`;
+        this.config = `<style>html {font-size: ${this.fontSizeDefault}px }</style>`;
         this.config = this.sanatizer.bypassSecurityTrustHtml(this.config);
-        console.log(this.fontSizeDefault);
     }
 }

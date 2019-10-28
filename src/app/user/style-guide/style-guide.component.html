@@ -18,589 +18,589 @@
                     Download css file (minified)
                 </button>
             </nav>
-                        <form class="" [formGroup]="styleGuideForm">
-                            <div class="colors">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="row d-flex justify-content-between">
-                                            <i class="fa fa-close fa-lg" (click)="slideToggle()"></i>
-                                            <div class="col-12 col-lg-2">
-                                                <div>Select primary color : &nbsp;&nbsp;&nbsp;</div>
-                                                <input
-                                                        class="form-control  colorPicker"
-                                                        [(colorPicker)]="primaryColor"
-                                                        [style.background]="primaryColor"
-                                                        [cpPresetColors]="['#fff', '#2889e9']"
-                                                        cpPosition="auto"
-                                                        (colorPickerChange)="PrimaryColorSelected($event)"
-                                                />
-                                            </div>
-                                            <div class="col-12 col-lg-2">
-                                                <div>Select secondary color : &nbsp;&nbsp;&nbsp;</div>
-                                                <input
-                                                        class="form-control  colorPicker"
-                                                        [(colorPicker)]="secondaryColor"
-                                                        [style.background]="secondaryColor"
-                                                        [cpPresetColors]="['#fff', '#2889e9']"
-                                                        cpPosition="auto"
-                                                        (colorPickerChange)="secondaryColorSelected($event)"
-                                                />
-                                            </div>
-                                            <div class="col-12 col-lg-2">
-                                                <div>Select success color : &nbsp;&nbsp;&nbsp;</div>
-                                                <input
-                                                        class="form-control  colorPicker"
-                                                        [(colorPicker)]="successColor"
-                                                        [style.background]="successColor"
-                                                        [cpPresetColors]="['#fff', '#2889e9']"
-                                                        cpPosition="auto"
-                                                        (colorPickerChange)="successColorSelected($event)"
-                                                />
-                                            </div>
-                                            <div class="col-12 col-lg-2">
-                                                <div>Select info color : &nbsp;&nbsp;&nbsp;</div>
-                                                <input
-                                                        class="form-control  colorPicker"
-                                                        [(colorPicker)]="infoColor"
-                                                        [style.background]="infoColor"
-                                                        [cpPresetColors]="['#fff', '#2889e9']"
-                                                        cpPosition="auto"
-                                                        (colorPickerChange)="infoColorSelected($event)"
-                                                />
-                                            </div>
-                                            <div class="col-12 col-lg-2">
-                                                <div>Select warning color : &nbsp;&nbsp;&nbsp;</div>
-                                                <input
-                                                        class="form-control  colorPicker"
-                                                        [(colorPicker)]="warningColor"
-                                                        [style.background]="warningColor"
-                                                        [cpPresetColors]="['#fff', '#2889e9']"
-                                                        cpPosition="auto"
-                                                        (colorPickerChange)="warningColorSelected($event)"
-                                                />
-                                            </div>
-                                            <div class="col-12 col-lg-2">
-                                                <div>Select danger color : &nbsp;&nbsp;&nbsp;</div>
-                                                <input
-                                                        class="form-control  colorPicker"
-                                                        [(colorPicker)]="dangerColor"
-                                                        [style.background]="dangerColor"
-                                                        [cpPresetColors]="['#fff', '#2889e9']"
-                                                        cpPosition="auto"
-                                                        (colorPickerChange)="dangerColorSelected($event)"
-                                                />
-                                            </div>
-                                            <div class="col-12 col-lg-2">
-                                                <div>Select dark color : &nbsp;&nbsp;&nbsp;</div>
-                                                <input
-                                                        class="form-control  colorPicker"
-                                                        [(colorPicker)]="darkColor"
-                                                        [style.background]="darkColor"
-                                                        [cpPresetColors]="['#fff', '#2889e9']"
-                                                        cpPosition="auto"
-                                                        (colorPickerChange)="darkColorSelected($event)"
-                                                />
-                                            </div>
-                                            <div class="col-12 col-lg-2">
-                                                <div>Select light color : &nbsp;&nbsp;&nbsp;</div>
-                                                <input
-                                                        class="form-control  colorPicker"
-                                                        [(colorPicker)]="lightColor"
-                                                        [style.background]="lightColor"
-                                                        [cpPresetColors]="['#fff', '#2889e9']"
-                                                        cpPosition="auto"
-                                                        (colorPickerChange)="lightColorSelected($event)"
-                                                />
-                                            </div>
-                                            <div class="col-12 col-lg-2">
-                                                <div>Select primary gradient: &nbsp;&nbsp;&nbsp;</div>
-                                                <input
-                                                        class="form-control  colorPicker"
-                                                        [(colorPicker)]="primaryGradientColor"
-                                                        [style.background]="primaryGradientColor"
-                                                        [cpPresetColors]="['#fff', '#2889e9']"
-                                                        cpPosition="auto"
-                                                        (colorPickerChange)="primaryGradientColorSelected($event)"
-                                                />
-                                            </div>
-                                            <div class="col-12 col-lg-2">
-                                                <div>Select secondary gradient : &nbsp;&nbsp;&nbsp;</div>
-                                                <input
-                                                        class="form-control  colorPicker"
-                                                        [(colorPicker)]="secondaryGradientColor"
-                                                        [style.background]="secondaryGradientColor"
-                                                        [cpPresetColors]="['#fff', '#2889e9']"
-                                                        cpPosition="auto"
-                                                        (colorPickerChange)="secondaryGradientColorSelected($event)"
-                                                />
-                                            </div>
-                                            <div class="col-12 col-lg-2">
-                                                <div>Select success gradient : &nbsp;&nbsp;&nbsp;</div>
-                                                <input
-                                                        class="form-control  colorPicker"
-                                                        [(colorPicker)]="successGradientColor"
-                                                        [style.background]="successGradientColor"
-                                                        [cpPresetColors]="['#fff', '#2889e9']"
-                                                        cpPosition="auto"
-                                                        (colorPickerChange)="successGradientColorSelected($event)"
-                                                />
-                                            </div>
-                                            <div class="col-12 col-lg-2">
-                                                <div>Select info gradient : &nbsp;&nbsp;&nbsp;</div>
-                                                <input
-                                                        class="form-control  colorPicker"
-                                                        [(colorPicker)]="infoGradientColor"
-                                                        [style.background]="infoGradientColor"
-                                                        [cpPresetColors]="['#fff', '#2889e9']"
-                                                        cpPosition="auto"
-                                                        (colorPickerChange)="infoGradientColorSelected($event)"
-                                                />
-                                            </div>
-                                            <div class="col-12 col-lg-2">
-                                                <div>Select warning gradient : &nbsp;&nbsp;&nbsp;</div>
-                                                <input
-                                                        class="form-control  colorPicker"
-                                                        [(colorPicker)]="warningGradientColor"
-                                                        [style.background]="warningGradientColor"
-                                                        [cpPresetColors]="['#fff', '#2889e9']"
-                                                        cpPosition="auto"
-                                                        (colorPickerChange)="warningGradientColorSelected($event)"
-                                                />
-                                            </div>
-                                            <div class="col-12 col-lg-2">
-                                                <div>Select danger gradient : &nbsp;&nbsp;&nbsp;</div>
-                                                <input
-                                                        class="form-control  colorPicker"
-                                                        [(colorPicker)]="dangerGradientColor"
-                                                        [style.background]="dangerGradientColor"
-                                                        [cpPresetColors]="['#fff', '#2889e9']"
-                                                        cpPosition="auto"
-                                                        (colorPickerChange)="dangerGradientColorSelected($event)"
-                                                />
-                                            </div>
-                                        </div>
-                                    </div>
+            <form class="" [formGroup]="styleGuideForm" class="col-12">
+                <div class="colors">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row d-flex justify-content-between">
+                                <i class="fa fa-close fa-lg" (click)="slideToggle()"></i>
+                                <div class="col-12 col-lg-2">
+                                    <div>Select primary color : &nbsp;&nbsp;&nbsp;</div>
+                                    <input
+                                            class="form-control  colorPicker"
+                                            [(colorPicker)]="primaryColor"
+                                            [style.background]="primaryColor"
+                                            [cpPresetColors]="['#fff', '#2889e9']"
+                                            cpPosition="auto"
+                                            (colorPickerChange)="PrimaryColorSelected($event)"
+                                    />
+                                </div>
+                                <div class="col-12 col-lg-2">
+                                    <div>Select secondary color : &nbsp;&nbsp;&nbsp;</div>
+                                    <input
+                                            class="form-control  colorPicker"
+                                            [(colorPicker)]="secondaryColor"
+                                            [style.background]="secondaryColor"
+                                            [cpPresetColors]="['#fff', '#2889e9']"
+                                            cpPosition="auto"
+                                            (colorPickerChange)="secondaryColorSelected($event)"
+                                    />
+                                </div>
+                                <div class="col-12 col-lg-2">
+                                    <div>Select success color : &nbsp;&nbsp;&nbsp;</div>
+                                    <input
+                                            class="form-control  colorPicker"
+                                            [(colorPicker)]="successColor"
+                                            [style.background]="successColor"
+                                            [cpPresetColors]="['#fff', '#2889e9']"
+                                            cpPosition="auto"
+                                            (colorPickerChange)="successColorSelected($event)"
+                                    />
+                                </div>
+                                <div class="col-12 col-lg-2">
+                                    <div>Select info color : &nbsp;&nbsp;&nbsp;</div>
+                                    <input
+                                            class="form-control  colorPicker"
+                                            [(colorPicker)]="infoColor"
+                                            [style.background]="infoColor"
+                                            [cpPresetColors]="['#fff', '#2889e9']"
+                                            cpPosition="auto"
+                                            (colorPickerChange)="infoColorSelected($event)"
+                                    />
+                                </div>
+                                <div class="col-12 col-lg-2">
+                                    <div>Select warning color : &nbsp;&nbsp;&nbsp;</div>
+                                    <input
+                                            class="form-control  colorPicker"
+                                            [(colorPicker)]="warningColor"
+                                            [style.background]="warningColor"
+                                            [cpPresetColors]="['#fff', '#2889e9']"
+                                            cpPosition="auto"
+                                            (colorPickerChange)="warningColorSelected($event)"
+                                    />
+                                </div>
+                                <div class="col-12 col-lg-2">
+                                    <div>Select danger color : &nbsp;&nbsp;&nbsp;</div>
+                                    <input
+                                            class="form-control  colorPicker"
+                                            [(colorPicker)]="dangerColor"
+                                            [style.background]="dangerColor"
+                                            [cpPresetColors]="['#fff', '#2889e9']"
+                                            cpPosition="auto"
+                                            (colorPickerChange)="dangerColorSelected($event)"
+                                    />
+                                </div>
+                                <div class="col-12 col-lg-2">
+                                    <div>Select dark color : &nbsp;&nbsp;&nbsp;</div>
+                                    <input
+                                            class="form-control  colorPicker"
+                                            [(colorPicker)]="darkColor"
+                                            [style.background]="darkColor"
+                                            [cpPresetColors]="['#fff', '#2889e9']"
+                                            cpPosition="auto"
+                                            (colorPickerChange)="darkColorSelected($event)"
+                                    />
+                                </div>
+                                <div class="col-12 col-lg-2">
+                                    <div>Select light color : &nbsp;&nbsp;&nbsp;</div>
+                                    <input
+                                            class="form-control  colorPicker"
+                                            [(colorPicker)]="lightColor"
+                                            [style.background]="lightColor"
+                                            [cpPresetColors]="['#fff', '#2889e9']"
+                                            cpPosition="auto"
+                                            (colorPickerChange)="lightColorSelected($event)"
+                                    />
+                                </div>
+                                <div class="col-12 col-lg-2">
+                                    <div>Select primary gradient: &nbsp;&nbsp;&nbsp;</div>
+                                    <input
+                                            class="form-control  colorPicker"
+                                            [(colorPicker)]="primaryGradientColor"
+                                            [style.background]="primaryGradientColor"
+                                            [cpPresetColors]="['#fff', '#2889e9']"
+                                            cpPosition="auto"
+                                            (colorPickerChange)="primaryGradientColorSelected($event)"
+                                    />
+                                </div>
+                                <div class="col-12 col-lg-2">
+                                    <div>Select secondary gradient : &nbsp;&nbsp;&nbsp;</div>
+                                    <input
+                                            class="form-control  colorPicker"
+                                            [(colorPicker)]="secondaryGradientColor"
+                                            [style.background]="secondaryGradientColor"
+                                            [cpPresetColors]="['#fff', '#2889e9']"
+                                            cpPosition="auto"
+                                            (colorPickerChange)="secondaryGradientColorSelected($event)"
+                                    />
+                                </div>
+                                <div class="col-12 col-lg-2">
+                                    <div>Select success gradient : &nbsp;&nbsp;&nbsp;</div>
+                                    <input
+                                            class="form-control  colorPicker"
+                                            [(colorPicker)]="successGradientColor"
+                                            [style.background]="successGradientColor"
+                                            [cpPresetColors]="['#fff', '#2889e9']"
+                                            cpPosition="auto"
+                                            (colorPickerChange)="successGradientColorSelected($event)"
+                                    />
+                                </div>
+                                <div class="col-12 col-lg-2">
+                                    <div>Select info gradient : &nbsp;&nbsp;&nbsp;</div>
+                                    <input
+                                            class="form-control  colorPicker"
+                                            [(colorPicker)]="infoGradientColor"
+                                            [style.background]="infoGradientColor"
+                                            [cpPresetColors]="['#fff', '#2889e9']"
+                                            cpPosition="auto"
+                                            (colorPickerChange)="infoGradientColorSelected($event)"
+                                    />
+                                </div>
+                                <div class="col-12 col-lg-2">
+                                    <div>Select warning gradient : &nbsp;&nbsp;&nbsp;</div>
+                                    <input
+                                            class="form-control  colorPicker"
+                                            [(colorPicker)]="warningGradientColor"
+                                            [style.background]="warningGradientColor"
+                                            [cpPresetColors]="['#fff', '#2889e9']"
+                                            cpPosition="auto"
+                                            (colorPickerChange)="warningGradientColorSelected($event)"
+                                    />
+                                </div>
+                                <div class="col-12 col-lg-2">
+                                    <div>Select danger gradient : &nbsp;&nbsp;&nbsp;</div>
+                                    <input
+                                            class="form-control  colorPicker"
+                                            [(colorPicker)]="dangerGradientColor"
+                                            [style.background]="dangerGradientColor"
+                                            [cpPresetColors]="['#fff', '#2889e9']"
+                                            cpPosition="auto"
+                                            (colorPickerChange)="dangerGradientColorSelected($event)"
+                                    />
                                 </div>
                             </div>
-                            <div class="mt-4">
-                                <div *ngFor="let component of components?.components">
-                                    <div class="col-12 mb-5" *ngIf="component?.list?.length">
-                                        <div class="card">
-                                            <div class="card-header">{{component?.name}}</div>
-                                            <div class="card-body">
-                                                <div class="row">
-                                                    <div class="col-12 col-lg-6 preview" *ngFor="let cmp of component?.list">
-                                                        <div class="row col-10 d-flex justify-content-between">
-                                                            <div class="form-check">
-                                                                <label class="form-check-label">
-                                                                    <input
-                                                                            type="radio"
-                                                                            class="form-check-input"
-                                                                            [value]="cmp?._id"
-                                                                            [formControlName]="component?.name.toLowerCase()"
-                                                                            (change)="styleSelected(cmp?.css, component?.name)"
-                                                                    />{{ cmp?.name }}
-                                                                </label>
-                                                            </div>
-                                                            <button
-                                                                    class="btn btn-primary btn-sm htmlButton"
-                                                                    data-toggle="modal"
-                                                                    data-target="#htmlModal"
-                                                                    title="HTML"
-                                                                    (click)="displayHtml(cmp?.html)">
-                                                                < html />
-                                                            </button>
-                                                        </div>
-
-                                                        <app-user-preview
-                                                                [id]="cmp?._id"
-                                                                [html]="cmp?.html"
-                                                                [css]="cmp?.previewCss"
-                                                                [primaryColor]="primaryColor"
-                                                                [successColor]="successColor"
-                                                                [dangerColor]="dangerColor"
-                                                                [secondaryColor]="secondaryColor"
-                                                                [warningColor]="warningColor"
-                                                                [lightColor]="lightColor"
-                                                                [darkColor]="darkColor"
-                                                                [infoColor]="infoColor"
-                                                                [primaryGradientColor]="primaryGradientColor"
-                                                                [secondaryGradientColor]="secondaryGradientColor"
-                                                                [successGradientColor]="successGradientColor"
-                                                                [infoGradientColor]="infoGradientColor"
-                                                                [warningGradientColor]="warningGradientColor"
-                                                                [dangerGradientColor]="dangerGradientColor"
-                                                        >
-                                                        </app-user-preview>
-                                                    </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-4" id="bootstrapComponents">
+                    <div *ngFor="let component of components?.components">
+                        <div class="col-12 mb-5" *ngIf="component?.list?.length">
+                            <div class="card">
+                                <div class="card-header">{{component?.name}}</div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-12 col-lg-6 preview" *ngFor="let cmp of component?.list">
+                                            <div class="row col-10 d-flex justify-content-between">
+                                                <div class="form-check">
+                                                    <label class="form-check-label">
+                                                        <input
+                                                                type="radio"
+                                                                class="form-check-input"
+                                                                [value]="cmp?._id"
+                                                                [formControlName]="component?.name.toLowerCase()"
+                                                                (change)="styleSelected(cmp?.css, component?.name)"
+                                                        />{{ cmp?.name }}
+                                                    </label>
                                                 </div>
+                                                <button
+                                                        class="btn btn-primary btn-sm htmlButton"
+                                                        data-toggle="modal"
+                                                        data-target="#htmlModal"
+                                                        title="HTML"
+                                                        (click)="displayHtml(cmp?.html)">
+                                                    < html />
+                                                </button>
                                             </div>
+
+                                            <app-user-preview
+                                                    [id]="cmp?._id"
+                                                    [html]="cmp?.html"
+                                                    [css]="cmp?.previewCss"
+                                                    [primaryColor]="primaryColor"
+                                                    [successColor]="successColor"
+                                                    [dangerColor]="dangerColor"
+                                                    [secondaryColor]="secondaryColor"
+                                                    [warningColor]="warningColor"
+                                                    [lightColor]="lightColor"
+                                                    [darkColor]="darkColor"
+                                                    [infoColor]="infoColor"
+                                                    [primaryGradientColor]="primaryGradientColor"
+                                                    [secondaryGradientColor]="secondaryGradientColor"
+                                                    [successGradientColor]="successGradientColor"
+                                                    [infoGradientColor]="infoGradientColor"
+                                                    [warningGradientColor]="warningGradientColor"
+                                                    [dangerGradientColor]="dangerGradientColor"
+                                            >
+                                            </app-user-preview>
                                         </div>
                                     </div>
-                                    <!--                    <div class="col-12 mb-5" *ngIf="components?.tabs.length">-->
-                                    <!--                        <div class="card">-->
-                                    <!--                            <div class="card-header">Tabs</div>-->
-                                    <!--                            <div class="card-body">-->
-                                    <!--                                <div class="row">-->
-                                    <!--                                    <div class="col-12 col-lg-6 preview" *ngFor="let tab of components?.tabs">-->
-                                    <!--                                        <div class="row col-10 d-flex justify-content-between">-->
-                                    <!--                                            <div class="form-check">-->
-                                    <!--                                                <label class="form-check-label">-->
-                                    <!--                                                    <input-->
-                                    <!--                                                            type="radio"-->
-                                    <!--                                                            class="form-check-input"-->
-                                    <!--                                                            [value]="tab?._id"-->
-                                    <!--                                                            formControlName="tab"-->
-                                    <!--                                                            (change)="tabSelected(tab?.css)"-->
-                                    <!--                                                    />{{ tab?.name }}-->
-                                    <!--                                                </label>-->
-                                    <!--                                            </div>-->
-                                    <!--                                            <button-->
-                                    <!--                                                    class="btn btn-primary btn-sm htmlButton"-->
-                                    <!--                                                    data-toggle="modal"-->
-                                    <!--                                                    data-target="#htmlModal"-->
-                                    <!--                                                    title="HTML"-->
-                                    <!--                                                    (click)="displayHtml(tab?.html)">-->
-                                    <!--                                                < html >-->
-                                    <!--                                            </button>-->
-                                    <!--                                        </div>-->
-                                    <!--                                        <app-user-preview-->
-                                    <!--                                                [id]="tab?._id"-->
-                                    <!--                                                [html]="tab?.html"-->
-                                    <!--                                                [css]="tab?.previewCss"-->
-                                    <!--                                                [primaryColor]="primaryColor"-->
-                                    <!--                                                [successColor]="successColor"-->
-                                    <!--                                                [dangerColor]="dangerColor"-->
-                                    <!--                                                [secondaryColor]="secondaryColor"-->
-                                    <!--                                                [warningColor]="warningColor"-->
-                                    <!--                                                [lightColor]="lightColor"-->
-                                    <!--                                                [darkColor]="darkColor"-->
-                                    <!--                                                [primaryGradientColor]="primaryGradientColor"-->
-                                    <!--                                                [infoColor]="infoColor"-->
-                                    <!--                                                [primaryGradientColor]="primaryGradientColor"-->
-                                    <!--                                                [secondaryGradientColor]="secondaryGradientColor"-->
-                                    <!--                                                [successGradientColor]="successGradientColor"-->
-                                    <!--                                                [infoGradientColor]="infoGradientColor"-->
-                                    <!--                                                [warningGradientColor]="warningGradientColor"-->
-                                    <!--                                                [dangerGradientColor]="dangerGradientColor"-->
-                                    <!--                                        >-->
-                                    <!--                                        </app-user-preview>-->
-                                    <!--                                    </div>-->
-                                    <!--                                </div>-->
-                                    <!--                            </div>-->
-                                    <!--                        </div>-->
-                                    <!--                    </div>-->
-                                    <!--                    <div class="col-12 mb-5" *ngIf="components?.forms.length">-->
-                                    <!--                        <div class="card">-->
-                                    <!--                            <div class="card-header">Forms</div>-->
-                                    <!--                            <div class="card-body">-->
-                                    <!--                                <div class="row">-->
-                                    <!--                                    <div class="col-12 col-lg-6 preview" *ngFor="let form of components?.forms">-->
-                                    <!--                                        <div class="row col-10 d-flex justify-content-between">-->
-                                    <!--                                            <div class="form-check">-->
-                                    <!--                                                <label class="form-check-label">-->
-                                    <!--                                                    <input-->
-                                    <!--                                                            type="radio"-->
-                                    <!--                                                            class="form-check-input"-->
-                                    <!--                                                            [value]="form?._id"-->
-                                    <!--                                                            formControlName="form"-->
-                                    <!--                                                            (change)="tabSelected(form?.css)"-->
-                                    <!--                                                    />{{ form?.name }}-->
-                                    <!--                                                </label>-->
-                                    <!--                                            </div>-->
-                                    <!--                                            <button-->
-                                    <!--                                                    class="btn btn-primary btn-sm htmlButton"-->
-                                    <!--                                                    data-toggle="modal"-->
-                                    <!--                                                    data-target="#htmlModal"-->
-                                    <!--                                                    title="HTML"-->
-                                    <!--                                                    (click)="displayHtml(form?.html)">-->
-                                    <!--                                                < html >-->
-                                    <!--                                            </button>-->
-                                    <!--                                        </div>-->
-
-                                    <!--                                        <app-user-preview-->
-                                    <!--                                                [id]="form?._id"-->
-                                    <!--                                                [html]="form?.html"-->
-                                    <!--                                                [css]="form?.previewCss"-->
-                                    <!--                                                [primaryColor]="primaryColor"-->
-                                    <!--                                                [successColor]="successColor"-->
-                                    <!--                                                [dangerColor]="dangerColor"-->
-                                    <!--                                                [secondaryColor]="secondaryColor"-->
-                                    <!--                                                [warningColor]="warningColor"-->
-                                    <!--                                                [lightColor]="lightColor"-->
-                                    <!--                                                [darkColor]="darkColor"-->
-                                    <!--                                                [primaryGradientColor]="primaryGradientColor"-->
-                                    <!--                                                [infoColor]="infoColor"-->
-                                    <!--                                                [primaryGradientColor]="primaryGradientColor"-->
-                                    <!--                                                [secondaryGradientColor]="secondaryGradientColor"-->
-                                    <!--                                                [successGradientColor]="successGradientColor"-->
-                                    <!--                                                [infoGradientColor]="infoGradientColor"-->
-                                    <!--                                                [warningGradientColor]="warningGradientColor"-->
-                                    <!--                                                [dangerGradientColor]="dangerGradientColor"-->
-                                    <!--                                        >-->
-                                    <!--                                        </app-user-preview>-->
-                                    <!--                                    </div>-->
-                                    <!--                                </div>-->
-                                    <!--                            </div>-->
-                                    <!--                        </div>-->
-                                    <!--                    </div>-->
-                                    <!--                    <div class="col-12 mb-5" *ngIf="components?.badges.length">-->
-                                    <!--                        <div class="card">-->
-                                    <!--                            <div class="card-header">Badges</div>-->
-                                    <!--                            <div class="card-body">-->
-                                    <!--                                <div class="row">-->
-                                    <!--                                    <div class="col-12 col-lg-6 preview" *ngFor="let badge of components?.badges">-->
-                                    <!--                                        <div class="row col-10 d-flex justify-content-between">-->
-                                    <!--                                            <div class="form-check">-->
-                                    <!--                                                <label class="form-check-label">-->
-                                    <!--                                                    <input-->
-                                    <!--                                                            type="radio"-->
-                                    <!--                                                            class="form-check-input"-->
-                                    <!--                                                            [value]="badge?._id"-->
-                                    <!--                                                            formControlName="badge"-->
-                                    <!--                                                            (change)="tabSelected(badge?.css)"-->
-                                    <!--                                                    />{{ badge?.name }}-->
-                                    <!--                                                </label>-->
-                                    <!--                                            </div>-->
-                                    <!--                                            <button-->
-                                    <!--                                                    class="btn btn-primary btn-sm htmlButton"-->
-                                    <!--                                                    data-toggle="modal"-->
-                                    <!--                                                    data-target="#htmlModal"-->
-                                    <!--                                                    title="HTML"-->
-                                    <!--                                                    (click)="displayHtml(badge?.html)">-->
-                                    <!--                                                < html >-->
-                                    <!--                                            </button>-->
-                                    <!--                                        </div>-->
-
-
-                                    <!--                                        <app-user-preview-->
-                                    <!--                                                [id]="badge?._id"-->
-                                    <!--                                                [html]="badge?.html"-->
-                                    <!--                                                [css]="badge?.previewCss"-->
-                                    <!--                                                [primaryColor]="primaryColor"-->
-                                    <!--                                                [successColor]="successColor"-->
-                                    <!--                                                [dangerColor]="dangerColor"-->
-                                    <!--                                                [secondaryColor]="secondaryColor"-->
-                                    <!--                                                [warningColor]="warningColor"-->
-                                    <!--                                                [lightColor]="lightColor"-->
-                                    <!--                                                [darkColor]="darkColor"-->
-                                    <!--                                                [primaryGradientColor]="primaryGradientColor"-->
-                                    <!--                                                [infoColor]="infoColor"-->
-                                    <!--                                                [primaryGradientColor]="primaryGradientColor"-->
-                                    <!--                                                [secondaryGradientColor]="secondaryGradientColor"-->
-                                    <!--                                                [successGradientColor]="successGradientColor"-->
-                                    <!--                                                [infoGradientColor]="infoGradientColor"-->
-                                    <!--                                                [warningGradientColor]="warningGradientColor"-->
-                                    <!--                                                [dangerGradientColor]="dangerGradientColor"-->
-
-                                    <!--                                        >-->
-                                    <!--                                        </app-user-preview>-->
-                                    <!--                                    </div>-->
-                                    <!--                                </div>-->
-                                    <!--                            </div>-->
-                                    <!--                        </div>-->
-                                    <!--                    </div>-->
-                                    <!--                    <div class="col-12 mb-5" *ngIf="components?.cards.length">-->
-                                    <!--                        <div class="card">-->
-                                    <!--                            <div class="card-header">Cards</div>-->
-                                    <!--                            <div class="card-body">-->
-                                    <!--                                <div class="row">-->
-                                    <!--                                    <div class="col-12 col-lg-6 preview" *ngFor="let card of components?.cards">-->
-
-                                    <!--                                        <div class="row col-10 d-flex justify-content-between">-->
-                                    <!--                                            <div class="form-check">-->
-                                    <!--                                                <label class="form-check-label">-->
-                                    <!--                                                    <input-->
-                                    <!--                                                            type="radio"-->
-                                    <!--                                                            class="form-check-input"-->
-                                    <!--                                                            [value]="card?._id"-->
-                                    <!--                                                            formControlName="card"-->
-                                    <!--                                                            (change)="tabSelected(card?.css)"-->
-                                    <!--                                                    />{{ card?.name }}-->
-                                    <!--                                                </label>-->
-                                    <!--                                            </div>-->
-                                    <!--                                            <button-->
-                                    <!--                                                    class="btn btn-primary btn-sm htmlButton"-->
-                                    <!--                                                    data-toggle="modal"-->
-                                    <!--                                                    data-target="#htmlModal"-->
-                                    <!--                                                    title="HTML"-->
-                                    <!--                                                    (click)="displayHtml(card?.html)">-->
-                                    <!--                                                < html >-->
-                                    <!--                                            </button>-->
-                                    <!--                                        </div>-->
-
-                                    <!--                                        <app-user-preview-->
-                                    <!--                                                [id]="card?._id"-->
-                                    <!--                                                [html]="card?.html"-->
-                                    <!--                                                [css]="card?.previewCss"-->
-                                    <!--                                                [primaryColor]="primaryColor"-->
-                                    <!--                                                [successColor]="successColor"-->
-                                    <!--                                                [dangerColor]="dangerColor"-->
-                                    <!--                                                [secondaryColor]="secondaryColor"-->
-                                    <!--                                                [warningColor]="warningColor"-->
-                                    <!--                                                [lightColor]="lightColor"-->
-                                    <!--                                                [darkColor]="darkColor"-->
-                                    <!--                                                [primaryGradientColor]="primaryGradientColor"-->
-                                    <!--                                                [infoColor]="infoColor"-->
-                                    <!--                                                [primaryGradientColor]="primaryGradientColor"-->
-                                    <!--                                                [secondaryGradientColor]="secondaryGradientColor"-->
-                                    <!--                                                [successGradientColor]="successGradientColor"-->
-                                    <!--                                                [infoGradientColor]="infoGradientColor"-->
-                                    <!--                                                [warningGradientColor]="warningGradientColor"-->
-                                    <!--                                                [dangerGradientColor]="dangerGradientColor"-->
-                                    <!--                                        >-->
-                                    <!--                                        </app-user-preview>-->
-                                    <!--                                    </div>-->
-                                    <!--                                </div>-->
-                                    <!--                            </div>-->
-                                    <!--                        </div>-->
-                                    <!--                    </div>-->
-                                    <!--                    <div class="col-12 mb-5" *ngIf="components?.tooltips.length">-->
-                                    <!--                        <div class="card">-->
-                                    <!--                            <div class="card-header">Tooltip</div>-->
-                                    <!--                            <div class="card-body">-->
-                                    <!--                                <div class="row">-->
-                                    <!--                                    <div class="col-12 col-lg-6" *ngFor="let tooltip of components?.tooltips">-->
-                                    <!--                                        <div class="form-check">-->
-                                    <!--                                            <label class="form-check-label">-->
-                                    <!--                                                <input-->
-                                    <!--                                                        type="radio"-->
-                                    <!--                                                        class="form-check-input"-->
-                                    <!--                                                        [value]="tooltip?._id"-->
-                                    <!--                                                        formControlName="tooltip"-->
-                                    <!--                                                        (change)="tabSelected(tooltip?.css)"-->
-                                    <!--                                                />{{ tooltip?.name }}-->
-                                    <!--                                            </label>-->
-                                    <!--                                        </div>-->
-                                    <!--                                        <app-user-preview-->
-                                    <!--                                                [id]="tooltip?._id"-->
-                                    <!--                                                [html]="tooltip?.html"-->
-                                    <!--                                                [css]="tooltip?.previewCss"-->
-                                    <!--                                                [primaryColor]="primaryColor"-->
-                                    <!--                                                [successColor]="successColor"-->
-                                    <!--                                                [dangerColor]="dangerColor"-->
-                                    <!--                                                [secondaryColor]="secondaryColor"-->
-                                    <!--                                                [warningColor]="warningColor"-->
-                                    <!--                                                [lightColor]="lightColor"-->
-                                    <!--                                                [darkColor]="darkColor"-->
-                                    <!--                                                [primaryGradientColor]="primaryGradientColor"-->
-                                    <!--                                                [infoColor]="infoColor"-->
-                                    <!--                                                [primaryGradientColor]="primaryGradientColor"-->
-                                    <!--                                                [secondaryGradientColor]="secondaryGradientColor"-->
-                                    <!--                                                [successGradientColor]="successGradientColor"-->
-                                    <!--                                                [infoGradientColor]="infoGradientColor"-->
-                                    <!--                                                [warningGradientColor]="warningGradientColor"-->
-                                    <!--                                                [dangerGradientColor]="dangerGradientColor"-->
-                                    <!--                                        >-->
-                                    <!--                                        </app-user-preview>-->
-                                    <!--                                    </div>-->
-                                    <!--                                </div>-->
-                                    <!--                            </div>-->
-                                    <!--                        </div>-->
-                                    <!--                    </div>-->
-                                    <!--                    <div class="col-12 mb-5" *ngIf="components?.popovers.length">-->
-                                    <!--                        <div class="card">-->
-                                    <!--                            <div class="card-header">Popovers</div>-->
-                                    <!--                            <div class="card-body">-->
-                                    <!--                                <div class="row">-->
-                                    <!--                                    <div class="col-12 col-lg-6" *ngFor="let popover of components?.popovers">-->
-                                    <!--                                        <div class="form-check">-->
-                                    <!--                                            <label class="form-check-label">-->
-                                    <!--                                                <input-->
-                                    <!--                                                        type="radio"-->
-                                    <!--                                                        class="form-check-input"-->
-                                    <!--                                                        [value]="popover?._id"-->
-                                    <!--                                                        formControlName="popover"-->
-                                    <!--                                                        (change)="tabSelected(popover?.css)"-->
-                                    <!--                                                />{{ popover?.name }}-->
-                                    <!--                                            </label>-->
-                                    <!--                                        </div>-->
-                                    <!--                                        <app-user-preview-->
-                                    <!--                                                [id]="popover?._id"-->
-                                    <!--                                                [html]="popover?.html"-->
-                                    <!--                                                [css]="popover?.previewCss"-->
-                                    <!--                                                [primaryColor]="primaryColor"-->
-                                    <!--                                                [successColor]="successColor"-->
-                                    <!--                                                [dangerColor]="dangerColor"-->
-                                    <!--                                                [secondaryColor]="secondaryColor"-->
-                                    <!--                                                [warningColor]="warningColor"-->
-                                    <!--                                                [lightColor]="lightColor"-->
-                                    <!--                                                [darkColor]="darkColor"-->
-                                    <!--                                                [primaryGradientColor]="primaryGradientColor"-->
-                                    <!--                                                [infoColor]="infoColor"-->
-                                    <!--                                                [primaryGradientColor]="primaryGradientColor"-->
-                                    <!--                                                [secondaryGradientColor]="secondaryGradientColor"-->
-                                    <!--                                                [successGradientColor]="successGradientColor"-->
-                                    <!--                                                [infoGradientColor]="infoGradientColor"-->
-                                    <!--                                                [warningGradientColor]="warningGradientColor"-->
-                                    <!--                                                [dangerGradientColor]="dangerGradientColor"-->
-                                    <!--                                        >-->
-                                    <!--                                        </app-user-preview>-->
-                                    <!--                                    </div>-->
-                                    <!--                                </div>-->
-                                    <!--                            </div>-->
-                                    <!--                        </div>-->
-                                    <!--                    </div>-->
-                                    <!--                    <div class="col-12 mb-5" *ngIf="components?.alerts.length">-->
-                                    <!--                        <div class="card">-->
-                                    <!--                            <div class="card-header">Alerts</div>-->
-                                    <!--                            <div class="card-body">-->
-                                    <!--                                <div class="row">-->
-                                    <!--                                    <div class="col-12 col-lg-6 preview" *ngFor="let alert of components?.alerts">-->
-                                    <!--                                        <div class="row col-10 d-flex justify-content-between">-->
-                                    <!--                                            <div class="form-check">-->
-                                    <!--                                                <label class="form-check-label">-->
-                                    <!--                                                    <input-->
-                                    <!--                                                            type="radio"-->
-                                    <!--                                                            class="form-check-input"-->
-                                    <!--                                                            [value]="alert?._id"-->
-                                    <!--                                                            formControlName="alert"-->
-                                    <!--                                                            (change)="tabSelected(alert?.css)"-->
-                                    <!--                                                    />{{ alert?.name }}-->
-                                    <!--                                                </label>-->
-                                    <!--                                            </div>-->
-                                    <!--                                            <button-->
-                                    <!--                                                    class="btn btn-primary btn-sm htmlButton"-->
-                                    <!--                                                    data-toggle="modal"-->
-                                    <!--                                                    data-target="#htmlModal"-->
-                                    <!--                                                    title="HTML"-->
-                                    <!--                                                    (click)="displayHtml(alert?.html)">-->
-                                    <!--                                                < html >-->
-                                    <!--                                            </button>-->
-                                    <!--                                        </div>-->
-
-
-                                    <!--                                        <app-user-preview-->
-                                    <!--                                                [id]="alert?._id"-->
-                                    <!--                                                [html]="alert?.html"-->
-                                    <!--                                                [css]="alert?.previewCss"-->
-                                    <!--                                                [primaryColor]="primaryColor"-->
-                                    <!--                                                [successColor]="successColor"-->
-                                    <!--                                                [dangerColor]="dangerColor"-->
-                                    <!--                                                [secondaryColor]="secondaryColor"-->
-                                    <!--                                                [warningColor]="warningColor"-->
-                                    <!--                                                [lightColor]="lightColor"-->
-                                    <!--                                                [darkColor]="darkColor"-->
-                                    <!--                                                [primaryGradientColor]="primaryGradientColor"-->
-                                    <!--                                                [infoColor]="infoColor"-->
-                                    <!--                                                [primaryGradientColor]="primaryGradientColor"-->
-                                    <!--                                                [secondaryGradientColor]="secondaryGradientColor"-->
-                                    <!--                                                [successGradientColor]="successGradientColor"-->
-                                    <!--                                                [infoGradientColor]="infoGradientColor"-->
-                                    <!--                                                [warningGradientColor]="warningGradientColor"-->
-                                    <!--                                                [dangerGradientColor]="dangerGradientColor"-->
-                                    <!--                                        >-->
-                                    <!--                                        </app-user-preview>-->
-                                    <!--                                    </div>-->
-                                    <!--                                </div>-->
-                                    <!--                            </div>-->
-                                    <!--                        </div>-->
-                                    <!--                    </div>-->
-                                    <!--                    <div class="col-12 mb-4">-->
                                 </div>
-
                             </div>
-                        </form>
+                        </div>
+                        <!--                    <div class="col-12 mb-5" *ngIf="components?.tabs.length">-->
+                        <!--                        <div class="card">-->
+                        <!--                            <div class="card-header">Tabs</div>-->
+                        <!--                            <div class="card-body">-->
+                        <!--                                <div class="row">-->
+                        <!--                                    <div class="col-12 col-lg-6 preview" *ngFor="let tab of components?.tabs">-->
+                        <!--                                        <div class="row col-10 d-flex justify-content-between">-->
+                        <!--                                            <div class="form-check">-->
+                        <!--                                                <label class="form-check-label">-->
+                        <!--                                                    <input-->
+                        <!--                                                            type="radio"-->
+                        <!--                                                            class="form-check-input"-->
+                        <!--                                                            [value]="tab?._id"-->
+                        <!--                                                            formControlName="tab"-->
+                        <!--                                                            (change)="tabSelected(tab?.css)"-->
+                        <!--                                                    />{{ tab?.name }}-->
+                        <!--                                                </label>-->
+                        <!--                                            </div>-->
+                        <!--                                            <button-->
+                        <!--                                                    class="btn btn-primary btn-sm htmlButton"-->
+                        <!--                                                    data-toggle="modal"-->
+                        <!--                                                    data-target="#htmlModal"-->
+                        <!--                                                    title="HTML"-->
+                        <!--                                                    (click)="displayHtml(tab?.html)">-->
+                        <!--                                                < html >-->
+                        <!--                                            </button>-->
+                        <!--                                        </div>-->
+                        <!--                                        <app-user-preview-->
+                        <!--                                                [id]="tab?._id"-->
+                        <!--                                                [html]="tab?.html"-->
+                        <!--                                                [css]="tab?.previewCss"-->
+                        <!--                                                [primaryColor]="primaryColor"-->
+                        <!--                                                [successColor]="successColor"-->
+                        <!--                                                [dangerColor]="dangerColor"-->
+                        <!--                                                [secondaryColor]="secondaryColor"-->
+                        <!--                                                [warningColor]="warningColor"-->
+                        <!--                                                [lightColor]="lightColor"-->
+                        <!--                                                [darkColor]="darkColor"-->
+                        <!--                                                [primaryGradientColor]="primaryGradientColor"-->
+                        <!--                                                [infoColor]="infoColor"-->
+                        <!--                                                [primaryGradientColor]="primaryGradientColor"-->
+                        <!--                                                [secondaryGradientColor]="secondaryGradientColor"-->
+                        <!--                                                [successGradientColor]="successGradientColor"-->
+                        <!--                                                [infoGradientColor]="infoGradientColor"-->
+                        <!--                                                [warningGradientColor]="warningGradientColor"-->
+                        <!--                                                [dangerGradientColor]="dangerGradientColor"-->
+                        <!--                                        >-->
+                        <!--                                        </app-user-preview>-->
+                        <!--                                    </div>-->
+                        <!--                                </div>-->
+                        <!--                            </div>-->
+                        <!--                        </div>-->
+                        <!--                    </div>-->
+                        <!--                    <div class="col-12 mb-5" *ngIf="components?.forms.length">-->
+                        <!--                        <div class="card">-->
+                        <!--                            <div class="card-header">Forms</div>-->
+                        <!--                            <div class="card-body">-->
+                        <!--                                <div class="row">-->
+                        <!--                                    <div class="col-12 col-lg-6 preview" *ngFor="let form of components?.forms">-->
+                        <!--                                        <div class="row col-10 d-flex justify-content-between">-->
+                        <!--                                            <div class="form-check">-->
+                        <!--                                                <label class="form-check-label">-->
+                        <!--                                                    <input-->
+                        <!--                                                            type="radio"-->
+                        <!--                                                            class="form-check-input"-->
+                        <!--                                                            [value]="form?._id"-->
+                        <!--                                                            formControlName="form"-->
+                        <!--                                                            (change)="tabSelected(form?.css)"-->
+                        <!--                                                    />{{ form?.name }}-->
+                        <!--                                                </label>-->
+                        <!--                                            </div>-->
+                        <!--                                            <button-->
+                        <!--                                                    class="btn btn-primary btn-sm htmlButton"-->
+                        <!--                                                    data-toggle="modal"-->
+                        <!--                                                    data-target="#htmlModal"-->
+                        <!--                                                    title="HTML"-->
+                        <!--                                                    (click)="displayHtml(form?.html)">-->
+                        <!--                                                < html >-->
+                        <!--                                            </button>-->
+                        <!--                                        </div>-->
+
+                        <!--                                        <app-user-preview-->
+                        <!--                                                [id]="form?._id"-->
+                        <!--                                                [html]="form?.html"-->
+                        <!--                                                [css]="form?.previewCss"-->
+                        <!--                                                [primaryColor]="primaryColor"-->
+                        <!--                                                [successColor]="successColor"-->
+                        <!--                                                [dangerColor]="dangerColor"-->
+                        <!--                                                [secondaryColor]="secondaryColor"-->
+                        <!--                                                [warningColor]="warningColor"-->
+                        <!--                                                [lightColor]="lightColor"-->
+                        <!--                                                [darkColor]="darkColor"-->
+                        <!--                                                [primaryGradientColor]="primaryGradientColor"-->
+                        <!--                                                [infoColor]="infoColor"-->
+                        <!--                                                [primaryGradientColor]="primaryGradientColor"-->
+                        <!--                                                [secondaryGradientColor]="secondaryGradientColor"-->
+                        <!--                                                [successGradientColor]="successGradientColor"-->
+                        <!--                                                [infoGradientColor]="infoGradientColor"-->
+                        <!--                                                [warningGradientColor]="warningGradientColor"-->
+                        <!--                                                [dangerGradientColor]="dangerGradientColor"-->
+                        <!--                                        >-->
+                        <!--                                        </app-user-preview>-->
+                        <!--                                    </div>-->
+                        <!--                                </div>-->
+                        <!--                            </div>-->
+                        <!--                        </div>-->
+                        <!--                    </div>-->
+                        <!--                    <div class="col-12 mb-5" *ngIf="components?.badges.length">-->
+                        <!--                        <div class="card">-->
+                        <!--                            <div class="card-header">Badges</div>-->
+                        <!--                            <div class="card-body">-->
+                        <!--                                <div class="row">-->
+                        <!--                                    <div class="col-12 col-lg-6 preview" *ngFor="let badge of components?.badges">-->
+                        <!--                                        <div class="row col-10 d-flex justify-content-between">-->
+                        <!--                                            <div class="form-check">-->
+                        <!--                                                <label class="form-check-label">-->
+                        <!--                                                    <input-->
+                        <!--                                                            type="radio"-->
+                        <!--                                                            class="form-check-input"-->
+                        <!--                                                            [value]="badge?._id"-->
+                        <!--                                                            formControlName="badge"-->
+                        <!--                                                            (change)="tabSelected(badge?.css)"-->
+                        <!--                                                    />{{ badge?.name }}-->
+                        <!--                                                </label>-->
+                        <!--                                            </div>-->
+                        <!--                                            <button-->
+                        <!--                                                    class="btn btn-primary btn-sm htmlButton"-->
+                        <!--                                                    data-toggle="modal"-->
+                        <!--                                                    data-target="#htmlModal"-->
+                        <!--                                                    title="HTML"-->
+                        <!--                                                    (click)="displayHtml(badge?.html)">-->
+                        <!--                                                < html >-->
+                        <!--                                            </button>-->
+                        <!--                                        </div>-->
+
+
+                        <!--                                        <app-user-preview-->
+                        <!--                                                [id]="badge?._id"-->
+                        <!--                                                [html]="badge?.html"-->
+                        <!--                                                [css]="badge?.previewCss"-->
+                        <!--                                                [primaryColor]="primaryColor"-->
+                        <!--                                                [successColor]="successColor"-->
+                        <!--                                                [dangerColor]="dangerColor"-->
+                        <!--                                                [secondaryColor]="secondaryColor"-->
+                        <!--                                                [warningColor]="warningColor"-->
+                        <!--                                                [lightColor]="lightColor"-->
+                        <!--                                                [darkColor]="darkColor"-->
+                        <!--                                                [primaryGradientColor]="primaryGradientColor"-->
+                        <!--                                                [infoColor]="infoColor"-->
+                        <!--                                                [primaryGradientColor]="primaryGradientColor"-->
+                        <!--                                                [secondaryGradientColor]="secondaryGradientColor"-->
+                        <!--                                                [successGradientColor]="successGradientColor"-->
+                        <!--                                                [infoGradientColor]="infoGradientColor"-->
+                        <!--                                                [warningGradientColor]="warningGradientColor"-->
+                        <!--                                                [dangerGradientColor]="dangerGradientColor"-->
+
+                        <!--                                        >-->
+                        <!--                                        </app-user-preview>-->
+                        <!--                                    </div>-->
+                        <!--                                </div>-->
+                        <!--                            </div>-->
+                        <!--                        </div>-->
+                        <!--                    </div>-->
+                        <!--                    <div class="col-12 mb-5" *ngIf="components?.cards.length">-->
+                        <!--                        <div class="card">-->
+                        <!--                            <div class="card-header">Cards</div>-->
+                        <!--                            <div class="card-body">-->
+                        <!--                                <div class="row">-->
+                        <!--                                    <div class="col-12 col-lg-6 preview" *ngFor="let card of components?.cards">-->
+
+                        <!--                                        <div class="row col-10 d-flex justify-content-between">-->
+                        <!--                                            <div class="form-check">-->
+                        <!--                                                <label class="form-check-label">-->
+                        <!--                                                    <input-->
+                        <!--                                                            type="radio"-->
+                        <!--                                                            class="form-check-input"-->
+                        <!--                                                            [value]="card?._id"-->
+                        <!--                                                            formControlName="card"-->
+                        <!--                                                            (change)="tabSelected(card?.css)"-->
+                        <!--                                                    />{{ card?.name }}-->
+                        <!--                                                </label>-->
+                        <!--                                            </div>-->
+                        <!--                                            <button-->
+                        <!--                                                    class="btn btn-primary btn-sm htmlButton"-->
+                        <!--                                                    data-toggle="modal"-->
+                        <!--                                                    data-target="#htmlModal"-->
+                        <!--                                                    title="HTML"-->
+                        <!--                                                    (click)="displayHtml(card?.html)">-->
+                        <!--                                                < html >-->
+                        <!--                                            </button>-->
+                        <!--                                        </div>-->
+
+                        <!--                                        <app-user-preview-->
+                        <!--                                                [id]="card?._id"-->
+                        <!--                                                [html]="card?.html"-->
+                        <!--                                                [css]="card?.previewCss"-->
+                        <!--                                                [primaryColor]="primaryColor"-->
+                        <!--                                                [successColor]="successColor"-->
+                        <!--                                                [dangerColor]="dangerColor"-->
+                        <!--                                                [secondaryColor]="secondaryColor"-->
+                        <!--                                                [warningColor]="warningColor"-->
+                        <!--                                                [lightColor]="lightColor"-->
+                        <!--                                                [darkColor]="darkColor"-->
+                        <!--                                                [primaryGradientColor]="primaryGradientColor"-->
+                        <!--                                                [infoColor]="infoColor"-->
+                        <!--                                                [primaryGradientColor]="primaryGradientColor"-->
+                        <!--                                                [secondaryGradientColor]="secondaryGradientColor"-->
+                        <!--                                                [successGradientColor]="successGradientColor"-->
+                        <!--                                                [infoGradientColor]="infoGradientColor"-->
+                        <!--                                                [warningGradientColor]="warningGradientColor"-->
+                        <!--                                                [dangerGradientColor]="dangerGradientColor"-->
+                        <!--                                        >-->
+                        <!--                                        </app-user-preview>-->
+                        <!--                                    </div>-->
+                        <!--                                </div>-->
+                        <!--                            </div>-->
+                        <!--                        </div>-->
+                        <!--                    </div>-->
+                        <!--                    <div class="col-12 mb-5" *ngIf="components?.tooltips.length">-->
+                        <!--                        <div class="card">-->
+                        <!--                            <div class="card-header">Tooltip</div>-->
+                        <!--                            <div class="card-body">-->
+                        <!--                                <div class="row">-->
+                        <!--                                    <div class="col-12 col-lg-6" *ngFor="let tooltip of components?.tooltips">-->
+                        <!--                                        <div class="form-check">-->
+                        <!--                                            <label class="form-check-label">-->
+                        <!--                                                <input-->
+                        <!--                                                        type="radio"-->
+                        <!--                                                        class="form-check-input"-->
+                        <!--                                                        [value]="tooltip?._id"-->
+                        <!--                                                        formControlName="tooltip"-->
+                        <!--                                                        (change)="tabSelected(tooltip?.css)"-->
+                        <!--                                                />{{ tooltip?.name }}-->
+                        <!--                                            </label>-->
+                        <!--                                        </div>-->
+                        <!--                                        <app-user-preview-->
+                        <!--                                                [id]="tooltip?._id"-->
+                        <!--                                                [html]="tooltip?.html"-->
+                        <!--                                                [css]="tooltip?.previewCss"-->
+                        <!--                                                [primaryColor]="primaryColor"-->
+                        <!--                                                [successColor]="successColor"-->
+                        <!--                                                [dangerColor]="dangerColor"-->
+                        <!--                                                [secondaryColor]="secondaryColor"-->
+                        <!--                                                [warningColor]="warningColor"-->
+                        <!--                                                [lightColor]="lightColor"-->
+                        <!--                                                [darkColor]="darkColor"-->
+                        <!--                                                [primaryGradientColor]="primaryGradientColor"-->
+                        <!--                                                [infoColor]="infoColor"-->
+                        <!--                                                [primaryGradientColor]="primaryGradientColor"-->
+                        <!--                                                [secondaryGradientColor]="secondaryGradientColor"-->
+                        <!--                                                [successGradientColor]="successGradientColor"-->
+                        <!--                                                [infoGradientColor]="infoGradientColor"-->
+                        <!--                                                [warningGradientColor]="warningGradientColor"-->
+                        <!--                                                [dangerGradientColor]="dangerGradientColor"-->
+                        <!--                                        >-->
+                        <!--                                        </app-user-preview>-->
+                        <!--                                    </div>-->
+                        <!--                                </div>-->
+                        <!--                            </div>-->
+                        <!--                        </div>-->
+                        <!--                    </div>-->
+                        <!--                    <div class="col-12 mb-5" *ngIf="components?.popovers.length">-->
+                        <!--                        <div class="card">-->
+                        <!--                            <div class="card-header">Popovers</div>-->
+                        <!--                            <div class="card-body">-->
+                        <!--                                <div class="row">-->
+                        <!--                                    <div class="col-12 col-lg-6" *ngFor="let popover of components?.popovers">-->
+                        <!--                                        <div class="form-check">-->
+                        <!--                                            <label class="form-check-label">-->
+                        <!--                                                <input-->
+                        <!--                                                        type="radio"-->
+                        <!--                                                        class="form-check-input"-->
+                        <!--                                                        [value]="popover?._id"-->
+                        <!--                                                        formControlName="popover"-->
+                        <!--                                                        (change)="tabSelected(popover?.css)"-->
+                        <!--                                                />{{ popover?.name }}-->
+                        <!--                                            </label>-->
+                        <!--                                        </div>-->
+                        <!--                                        <app-user-preview-->
+                        <!--                                                [id]="popover?._id"-->
+                        <!--                                                [html]="popover?.html"-->
+                        <!--                                                [css]="popover?.previewCss"-->
+                        <!--                                                [primaryColor]="primaryColor"-->
+                        <!--                                                [successColor]="successColor"-->
+                        <!--                                                [dangerColor]="dangerColor"-->
+                        <!--                                                [secondaryColor]="secondaryColor"-->
+                        <!--                                                [warningColor]="warningColor"-->
+                        <!--                                                [lightColor]="lightColor"-->
+                        <!--                                                [darkColor]="darkColor"-->
+                        <!--                                                [primaryGradientColor]="primaryGradientColor"-->
+                        <!--                                                [infoColor]="infoColor"-->
+                        <!--                                                [primaryGradientColor]="primaryGradientColor"-->
+                        <!--                                                [secondaryGradientColor]="secondaryGradientColor"-->
+                        <!--                                                [successGradientColor]="successGradientColor"-->
+                        <!--                                                [infoGradientColor]="infoGradientColor"-->
+                        <!--                                                [warningGradientColor]="warningGradientColor"-->
+                        <!--                                                [dangerGradientColor]="dangerGradientColor"-->
+                        <!--                                        >-->
+                        <!--                                        </app-user-preview>-->
+                        <!--                                    </div>-->
+                        <!--                                </div>-->
+                        <!--                            </div>-->
+                        <!--                        </div>-->
+                        <!--                    </div>-->
+                        <!--                    <div class="col-12 mb-5" *ngIf="components?.alerts.length">-->
+                        <!--                        <div class="card">-->
+                        <!--                            <div class="card-header">Alerts</div>-->
+                        <!--                            <div class="card-body">-->
+                        <!--                                <div class="row">-->
+                        <!--                                    <div class="col-12 col-lg-6 preview" *ngFor="let alert of components?.alerts">-->
+                        <!--                                        <div class="row col-10 d-flex justify-content-between">-->
+                        <!--                                            <div class="form-check">-->
+                        <!--                                                <label class="form-check-label">-->
+                        <!--                                                    <input-->
+                        <!--                                                            type="radio"-->
+                        <!--                                                            class="form-check-input"-->
+                        <!--                                                            [value]="alert?._id"-->
+                        <!--                                                            formControlName="alert"-->
+                        <!--                                                            (change)="tabSelected(alert?.css)"-->
+                        <!--                                                    />{{ alert?.name }}-->
+                        <!--                                                </label>-->
+                        <!--                                            </div>-->
+                        <!--                                            <button-->
+                        <!--                                                    class="btn btn-primary btn-sm htmlButton"-->
+                        <!--                                                    data-toggle="modal"-->
+                        <!--                                                    data-target="#htmlModal"-->
+                        <!--                                                    title="HTML"-->
+                        <!--                                                    (click)="displayHtml(alert?.html)">-->
+                        <!--                                                < html >-->
+                        <!--                                            </button>-->
+                        <!--                                        </div>-->
+
+
+                        <!--                                        <app-user-preview-->
+                        <!--                                                [id]="alert?._id"-->
+                        <!--                                                [html]="alert?.html"-->
+                        <!--                                                [css]="alert?.previewCss"-->
+                        <!--                                                [primaryColor]="primaryColor"-->
+                        <!--                                                [successColor]="successColor"-->
+                        <!--                                                [dangerColor]="dangerColor"-->
+                        <!--                                                [secondaryColor]="secondaryColor"-->
+                        <!--                                                [warningColor]="warningColor"-->
+                        <!--                                                [lightColor]="lightColor"-->
+                        <!--                                                [darkColor]="darkColor"-->
+                        <!--                                                [primaryGradientColor]="primaryGradientColor"-->
+                        <!--                                                [infoColor]="infoColor"-->
+                        <!--                                                [primaryGradientColor]="primaryGradientColor"-->
+                        <!--                                                [secondaryGradientColor]="secondaryGradientColor"-->
+                        <!--                                                [successGradientColor]="successGradientColor"-->
+                        <!--                                                [infoGradientColor]="infoGradientColor"-->
+                        <!--                                                [warningGradientColor]="warningGradientColor"-->
+                        <!--                                                [dangerGradientColor]="dangerGradientColor"-->
+                        <!--                                        >-->
+                        <!--                                        </app-user-preview>-->
+                        <!--                                    </div>-->
+                        <!--                                </div>-->
+                        <!--                            </div>-->
+                        <!--                        </div>-->
+                        <!--                    </div>-->
+                        <!--                    <div class="col-12 mb-4">-->
+                    </div>
+
+                </div>
+            </form>
         </div>
     </div>
 </div>
@@ -694,7 +694,11 @@
                 <i class="fa fa-close fa-lg" (click)="slideToggle2()"></i>
                 <div class="col-12">
                     <label>Font size :</label>
-                    <ng5-slider [(value)]="fontSizeDefault" [options]="options" (userChange)="fontSizeChanged()"></ng5-slider>
+                    <ng5-slider
+                            [(value)]="fontSizeDefault"
+                            [options]="options"
+                            (userChange)="fontSizeChanged()"
+                    ></ng5-slider>
                 </div>
             </div>
         </div>

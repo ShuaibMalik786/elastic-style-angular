@@ -14,8 +14,8 @@ export class EditModalComponent implements OnInit {
   modal: any;
   form = new FormGroup({
     name: new FormControl('', Validators.required),
-    css: new FormControl('', Validators.required),
-    scss: new FormControl('', Validators.required),
+    css: new FormControl(''),
+    scss: new FormControl(''),
     html: new FormControl('', Validators.required)
   });
 
@@ -46,13 +46,14 @@ export class EditModalComponent implements OnInit {
   initializeForm(modal) {
     this.form = new FormGroup({
       name: new FormControl(modal.name, Validators.required),
-      css: new FormControl(modal.css, Validators.required),
-      scss: new FormControl(modal.scss, Validators.required),
+      css: new FormControl(modal.css),
+      scss: new FormControl(modal.scss),
       html: new FormControl(modal.html, Validators.required)
     });
   }
 
   onSubmit() {
+    console.log(this.form.value)
     if (this.form.valid) {
       this.service
           .update(this.modalId, this.form.value)
