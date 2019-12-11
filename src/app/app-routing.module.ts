@@ -1,5 +1,6 @@
-import {NgModule} from '@angular/core';
-import {Routes, RouterModule} from '@angular/router';
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
+import { EuPopupComponent } from './npm-demos/eu-popup/eu-popup.component';
 
 const routes: Routes = [
     {
@@ -19,9 +20,14 @@ const routes: Routes = [
         loadChildren: './user-account/user-account.module#UserAccountModule'
     },
     {
+        path: 'eu-popup',
+        component: EuPopupComponent
+    },
+    {
         path: '',
         loadChildren: './user/user.module#UserModule'
     },
+ 
 ];
 
 @NgModule({

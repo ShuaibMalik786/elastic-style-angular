@@ -1,0 +1,66 @@
+<div class="container mt-5">
+  <div class="card">
+    <div class="card-body">
+      <div class="col-12">
+        <div class="row">
+          <div class="form-group col-4">
+            <label for="sel1">Select type:</label>
+            <select class="form-control" [(ngModel)]="options.type">
+              <option value="error">Error</option>
+              <option value="success">Success</option>
+              <option value="warning">Warning</option>
+              <option value="info">Info</option>
+            </select>
+          </div>
+          <div class="form-group col-4">
+            <label for="usr">Title:</label>
+            <input type="text" class="form-control" [(ngModel)]="options.title">
+          </div>
+          <div class="form-group col-4">
+            <label for="usr">Text:</label>
+            <input type="text" class="form-control" [(ngModel)]="options.text">
+          </div>
+          <div class="form-group col-4">
+            <label for="usr">Cancel button text:</label>
+            <input type="text" class="form-control" [(ngModel)]="options.cancelButtonText">
+          </div>
+          <div class="form-group col-4">
+            <label for="usr">Confirm button text:</label>
+            <input type="text" class="form-control" [(ngModel)]="options.confirmButtonText">
+          </div>
+          <div class="form-group col-4">
+            <label for="usr">Confirm button text color:</label>
+            <input type="text" class="form-control" [(ngModel)]="options.confirmButtonTextColor">
+          </div>
+          <div class="form-group col-4">
+            <label for="usr">Cancel button text color:</label>
+            <input type="text" class="form-control" [(ngModel)]="options.cancelButtonTextColor">
+          </div>
+          <div class="form-group col-4">
+            <label for="usr">Confirm button background color:</label>
+            <input type="text" class="form-control" [(ngModel)]="options.confirmButtonBgColor">
+          </div>
+          <div class="form-group col-4">
+            <label for="usr">Cancel button background color:</label>
+            <input type="text" class="form-control" [(ngModel)]="options.cancelButtonBgColor">
+          </div>
+          <div class="form-check col-12">
+            <label class="form-check-label">
+              <input type="checkbox" class="form-check-input" [(ngModel)]="options.showCancelButton">show Cancel Button:
+            </label>
+          </div>
+
+          <div class="form-check col-12">
+            <label class="form-check-label">
+              <input type="checkbox" class="form-check-input" [(ngModel)]="options.dismissOnClickOutside">dismiss On Click
+              Outside :
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="d-flex justify-content-center mt-3">
+    <button class="btn btn-primary" (click)="openPopp()">Open Popup</button>
+  </div>
+</div>
