@@ -24,7 +24,7 @@
     "eu-loader": "0.0.4",
     "eu-popup": "^0.1.8",
     "file-saver": "^2.0.2",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "ng2-validation-manager": "^0.5.3",
     "ng5-slider": "^1.2.4",
     "ngx-color-picker": "^8.1.0",
